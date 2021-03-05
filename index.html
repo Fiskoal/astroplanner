@@ -5,9 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Astroplanner 🌠</title>
+  <!-- Bootstrap 5's grid system -->
   <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/83fba97459.js" crossorigin="anonymous"></script>
+  <!-- custom styles -->
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <header>
     <h1 id="location-name">Location</h1>
@@ -16,7 +24,7 @@
 
   <section class="search">
     <input type="text" id="search-bar" placeholder="Enter a city name...">
-    <button>🔍</button>
+    <button><i class="fas fa-search"></i></button>
   </section>
   <main class="row">
     <section id="forecast-wrapper" class="col">
@@ -32,14 +40,14 @@
         </div>
 
         <div class="col">
-          <i id="icon-cloud-evening">☁</i>
+          <i id="icon-cloud-evening" class="small-icon fad fa-clouds"></i>
           <p id="text-cloud-evening">
             7pm
           </p>
         </div>
 
         <div class="col">
-          <i id="icon-cloud-night">🌧</i>
+          <i id="icon-cloud-moon" class="small-icon fad fa-cloud-moon"></i>
           <p id="text-cloud-night">
             11p
           </p>
@@ -50,16 +58,16 @@
 
         <div class="col">
           <h4 id="sun-title">Sun</h4>
-          <i id="sun-img" style="font-size: 40px;">☀</i>
+          <i id="sun-img" class="large-icon fas fa-sun"></i>
         </div>
 
         <div class="col">
-          <i id="icon-sunset">⛅</i>
+          <i id="icon-sunset" class="small-icon fad fa-sunset"></i>
           <p id="time-sunset">Sunset:<br>17:48</p>
         </div>
 
         <div class="col">
-          <i id="icon-sunrise">⛅</i>
+          <i id="icon-sunrise" class="small-icon fad fa-sunrise"></i>
           <p id="time-sunrise">Sunrise<br>07:48</p>
         </div>
       </div><!-- end #sun-wrapper-->

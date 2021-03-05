@@ -1,0 +1,73 @@
+/*:root {};*/
+/****************************/
+/** GLOBAL STYLES */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  background-color: lightsteelblue;
+}
+
+.large-icon {
+  font-size: 60px;
+}
+
+.small-icon {
+  font-size: 30px;
+}
+
+/****************************/
+/** HEADER STYLES */
+
+header {
+  background-color: deepskyblue;
+}
+
+/** SEARCH STYLES */
+/**********/
+.search {
+  background-color: mediumblue;
+}
+
+/****************************/
+/** FORECAST STYLES */
+#forecast-wrapper {
+  background-color: powderblue;
+}
+
+/** WEATHER WRAPPER STYLES */
+/**********/
+#weather-wrapper {
+  background-color: darkturquoise;
+}
+
+
+
+
+/** SUN WRAPPER STYLES */
+/**********/
+#sun-wrapper {
+  background-color: aquamarine;
+}
+
+
+
+
+
+/** MOON WRAPPER STYLES */
+/**********/
+#moon-wrapper {
+  background-color: aqua;
+}
+
+
+
+
+
+/****************************/
+/** STAR MAP STYLES */
+#map {
+  background-color: mediumaquamarine;
+}
