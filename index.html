@@ -12,11 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/83fba97459.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/media-query.css">
   <!-- custom styles -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="container">
   <header>
     <h1 id="location-name">Location</h1>
     <h5 id="lat-long">42.95859832498799, -85.68343656143264</h5>
@@ -27,10 +28,10 @@
     <button><i class="fas fa-search"></i></button>
   </section>
   <main class="row">
-    <section id="forecast-wrapper" class="col">
+    <section id="forecast-wrapper" class="col-md-3">
       <h2 class="forecast-header">Forecast</h2>
 
-      <div id="weather-wrapper" class="row" style="width: 400px;border: 1px solid black;">
+      <div id="weather-wrapper" class="row">
 
         <div class="col">
           <h4 id="weather-title">Weather:</h4>
@@ -54,7 +55,7 @@
         </div>
       </div> <!-- end #weather-wrapper-->
 
-      <div id="sun-wrapper" style="width: 400px;border: 1px solid black;" class="row">
+      <div id="sun-wrapper" class="row">
 
         <div class="col">
           <h4 id="sun-title">Sun</h4>
@@ -72,11 +73,11 @@
         </div>
       </div><!-- end #sun-wrapper-->
 
-      <div id="moon-wrapper" class="row" style="width: 400px;border: 1px solid black;">
+      <div id="moon-wrapper" class="row">
 
         <div class="col">
           <h4 id="moon-title">Moon</h4>
-          <i id="moon-phase" style="font-size: 40px;">🌒</i>
+          <i id="moon-phase">🌒</i>
         </div>
 
         <div class="col">
@@ -88,7 +89,7 @@
 
     </section>
 
-    <section id="map" class="col">
+    <section id="map" class="col-md-9">
       <h3 id="map-header">Star Map for <span>${Location}</span></h3>
       <img src="" alt="" id="map-img" width="300" height="300">
       <ul id="map-list">

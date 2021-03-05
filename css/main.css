@@ -2,6 +2,12 @@
 /****************************/
 /** GLOBAL STYLES */
 
+#weather-wrapper,
+#sun-wrapper,
+#moon-wrapper {
+  border: 1px solid black;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -10,7 +16,8 @@ main {
   background-color: lightsteelblue;
 }
 
-.large-icon {
+.large-icon,
+#moon-phase {
   font-size: 60px;
 }
 
