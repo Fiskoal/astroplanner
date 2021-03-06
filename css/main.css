@@ -9,11 +9,22 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Livvic', sans-serif;
 }
 
 main {
   background-color: lightsteelblue;
+}
+
+h1,
+h5 {
+  text-transform: uppercase;  
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h5 {
+  font-weight: 500;
 }
 
 .large-icon,
