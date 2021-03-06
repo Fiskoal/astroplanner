@@ -39,13 +39,13 @@
 
 <body class="container">
   <header>
-    <h1 id="location-name">City Name</h1>
-    <h5 id="lat-long">42.95859832498799, -85.68343656143264</h5>
+    <h1 id="location-header">Location</h1>
+    <h5 id="location-name"></h5>
   </header>
 
   <section class="search">
     <input type="text" id="search-bar" placeholder="Enter a city name...">
-    <button><i class="fas fa-search"></i></button>
+    <button id="search-button">🔍</button>
   </section>
   <main class="row">
     <section id="forecast-wrapper" class="col-md-3">
@@ -113,9 +113,9 @@
 
     </section>
 
-    <section id="map" class="col-md-9">
-      <h3 id="map-header">Star Map for <span>${Location}</span></h3>
-      <img src="" alt="" id="map-img" width="300" height="300">
+    <section id="map" class="col">
+      <h3 id="map-header"></h3>
+      <iframe alt="" id="map-img" width="300" height="300"></iframe>
       <ul id="map-list">
         <li class="map-list-item">List</li>
         <li class="map-list-item">of</li>
@@ -126,6 +126,7 @@
 
   </main>
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/skymap.js"></script>
 </body>
 </html>
