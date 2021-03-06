@@ -14,9 +14,12 @@ $("#search-button").on("click", function () {
         console.log("====================")
         // console logs
 
-        let ra = 180 + data.results[0].bounds.
-          northeast.lng
-        let de = data.results[0].bounds.northeast.lat
+        $("#location-name").text(data.results[0].formatted);
+
+        $("#map-header").text("Star Map for " + data.results[0].geometry.lat + ", " + data.results[0].geometry.lng);
+
+        let ra = 180 + data.results[0].geometry.lng
+        let de = data.results[0].geometry.lat
 
         $("#map-img").attr("src", "http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=4")
 
