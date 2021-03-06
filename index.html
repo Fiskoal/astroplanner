@@ -33,74 +33,64 @@
     <button id="search-button">🔍</button>
   </section>
   <main class="row">
+
     <section id="forecast-wrapper" class="col-md-3">
       <h2 class="forecast-header">Forecast</h2>
-
-      <div id="weather-wrapper" class="row">
-
-        <div class="col">
-          <h4 id="weather-title">Weather:</h4>
-          <p id="weather-desc">Cloudy with chance of rain</p>
-          <h4 id="visibility-title">Visibility:</h4>
-          <p id="visibility-desc">Poor</p>
-        </div>
-
-        <div class="col">
-          <i id="icon-cloud-evening" class="small-icon fad fa-clouds"></i>
-          <p id="text-cloud-evening">
+    
+      <div id="weather-wrapper">
+        <h4 id="weather-title">Weather:</h4>
+    
+        <div id="cloud-evening-div">
+          <i id="cloud-evening-icon" class="small-icon fad fa-clouds"></i>
+          <p id="cloud-evening-text">
             7pm
           </p>
         </div>
-
-        <div class="col">
-          <i id="icon-cloud-moon" class="small-icon fad fa-cloud-moon"></i>
-          <p id="text-cloud-night">
+    
+        <div id="cloud-night-div">
+          <i id="cloud-night-icon" class="small-icon fad fa-cloud-moon"></i>
+          <p id="cloud-night-text">
             11p
           </p>
         </div>
+
+        <div id="visibility-div">
+          <h4 id="visibility-title">Visibility:</h4>
+          <p id="visibility-desc">Poor</p>
+          <p id="weather-desc">Cloudy with chance of rain</p>
+        </div>
       </div> <!-- end #weather-wrapper-->
 
-      <div id="sun-wrapper" class="row">
-
-        <div class="col">
-          <h4 id="sun-title">Sun</h4>
-          <i id="sun-img" class="large-icon fas fa-sun"></i>
+      <div id="sun-wrapper">
+        <h4 id="sun-title">Sun:</h4>
+        <i id="sun-img" class="large-icon fas fa-sun"></i>
+        <div id="sunrise-time-div">
+            <p id="sunrise-time">Sunrise:<br>07:48</p>
+        </div>
+        <div id="sunset-time-div">
+            <p id="sunset-time">Sunset:<br>17:48</p>
         </div>
 
-        <div class="col">
-          <i id="icon-sunset" class="small-icon fad fa-sunset"></i>
-          <p id="time-sunset">Sunset:<br>17:48</p>
-        </div>
-
-        <div class="col">
-          <i id="icon-sunrise" class="small-icon fad fa-sunrise"></i>
-          <p id="time-sunrise">Sunrise<br>07:48</p>
-        </div>
       </div><!-- end #sun-wrapper-->
-
-      <div id="moon-wrapper" class="row">
-
-        <div class="col">
-          <h4 id="moon-title">Moon</h4>
-          <i id="moon-phase">🌒</i>
+      <div id="moon-wrapper">
+        <h4 id="moon-title">Moon:</h4>
+        <p id="moon-phase-label">Crescent</p>
+        <i id="moon-phase">🌒</i>
+        <div id="moonrise-div">
+          <p id="moonrise-label">Moonrise:</p>
+          <p id="moonrise-time">18:48</p>
         </div>
-
-        <div class="col">
-          <p id="moon-phase-label">Phase:<br>Crescent</p>
-          <p id="time-moonrise">18:48</p>
-          <p id="time-moonset">06:48</p>
+        <div id="moonset-div">
+          <p id="moonset-label">Moonset:</p>
+          <p id="moonset-label">06:48</p>
         </div>
       </div><!-- end #moon-wrapper-->
-
-      <div id="aurora-wrapper">
-        <h4>Aurora Hunting</h4>
-      </div>
 
     </section>
 
     <section id="map" class="col">
       <h3 id="map-header"></h3>
-      <iframe alt="" id="map-img" width="300" height="300"></iframe>
+      <iframe alt="" id="map-img" width="99%" height="60%'"></iframe>
       <ul id="map-list">
         <li class="map-list-item">List</li>
         <li class="map-list-item">of</li>

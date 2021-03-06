@@ -1,26 +1,28 @@
 /*:root {};*/
 /****************************/
 /** GLOBAL STYLES */
-
-#weather-wrapper,
-#sun-wrapper,
-#moon-wrapper {
-  border: 1px solid black;
-}
-
 body {
   /*font-family: 'Lato', sans-serif;*/
   font-family: 'Livvic', sans-serif;
+  font-size: 16px;
 }
 
 main {
-  background-color: lightsteelblue;
+  background-color: pink;
 }
 
 h1,
+h2,
+h3,
+h4,
 h5 {
   text-transform: uppercase;  
   font-family: 'Montserrat Alternates', sans-serif;
+  margin: 8px;
+}
+
+h4 {
+  margin: 0;
 }
 
 h5 {
@@ -41,12 +43,16 @@ h5 {
 
 header {
   background-color: deepskyblue;
+  padding: 10px;
+  margin: 0 -12px;
 }
 
 /** SEARCH STYLES */
 /**********/
 .search {
   background-color: mediumblue;
+  margin: 0 -12px;
+  padding: 5px;
 }
 
 /****************************/
@@ -59,30 +65,154 @@ header {
 /**********/
 #weather-wrapper {
   background-color: darkturquoise;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  row-gap: 5px;
 }
 
+#weather-title {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
 
+#cloud-evening-div {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
 
+#cloud-night-div {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#visibility-div {
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+}
+
+#cloud-evening-div,
+#cloud-night-div {
+  border: 1px solid black;
+}
+
+#weather-title,
+#visibility-title,
+#visibility-desc,
+#icon-cloud-evening,
+#text-cloud-evening,
+#icon-cloud-night,
+#text-cloud-night {
+  margin: 0;
+  padding: 0;
+}
 
 /** SUN WRAPPER STYLES */
 /**********/
+
+/** GRID **/
 #sun-wrapper {
   background-color: aquamarine;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+  row-gap: 5px;
 }
 
+#sun-title {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
 
+#sun-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 6;
+  margin: 0 auto;
+  align-self: center;
+}
 
+#sunrise-time-div {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
 
+#sunset-time-div {
+  grid-column: 2 / 4;
+  grid-row: 4 / 6;
+}
+
+#sunrise-time-div,
+#sunset-time-div {
+  border: 1px solid black;
+}
+
+/** STYLES */
+#sun-title,
+#sun-img,
+#sunset-time,
+#sunrise-time {
+  margin: 0;
+  padding: 0;
+}
+
+.sun-small-icon {
+  font-size: 30px;
+}
 
 /** MOON WRAPPER STYLES */
 /**********/
 #moon-wrapper {
   background-color: aqua;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+  row-gap: 5px;
 }
 
+#moon-title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
 
+#moon-phase-label {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
+#moon-phase {
+  grid-column: 1 / 2;
+  grid-row: 2 / 6;
+  margin: 0 auto;
+  align-self: center;
+}
 
+#moonrise-div {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+#moonset-div {
+  grid-column: 2 / 4;
+  grid-row: 4 / 6;
+}
+
+#moonrise-div,
+#moonset-div {
+  border: 1px solid black;
+}
+
+#moon-title,
+#moon-phase,
+#moon-phase-label,
+#moonrise-label,
+#moonset-label,
+#moonrise-time,
+#moonset-time {
+  margin: 0;
+  padding: 0;
+}
 
 /****************************/
 /** STAR MAP STYLES */
