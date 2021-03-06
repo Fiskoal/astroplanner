@@ -16,7 +16,7 @@
 
   <section class="search">
     <input type="text" id="search-bar" placeholder="Enter a city name...">
-    <button>🔍</button>
+    <button id="search-button">🔍</button>
   </section>
   <main class="row">
     <section id="forecast-wrapper" class="col">
@@ -82,7 +82,7 @@
 
     <section id="map" class="col">
       <h3 id="map-header">Star Map for <span>${Location}</span></h3>
-      <img src="" alt="" id="map-img" width="300" height="300">
+      <iframe alt="" id="map-img" width="300" height="300"></iframe>
       <ul id="map-list">
         <li class="map-list-item">List</li>
         <li class="map-list-item">of</li>
@@ -93,6 +93,7 @@
 
   </main>
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/skymap.js"></script>
 </body>
 </html>
