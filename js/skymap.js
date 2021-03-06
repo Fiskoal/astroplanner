@@ -21,7 +21,7 @@ $("#search-button").on("click", function () {
         let ra = 180 + data.results[0].geometry.lng
         let de = data.results[0].geometry.lat
 
-        $("#map-img").attr("src", "http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=4")
+        $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=4")
 
         // fetch("http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&angle=30&max_stars=1000&max_vmag=5", {
         //   mode: "no-cors"
