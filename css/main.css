@@ -1,17 +1,17 @@
 /*:root {};*/
 
-
-/* Set height of body and the document to 100% to enable "full page tabs" */
-body, html {
-  height: 100%;
-  margin: 0;
+body {
   font-family: Arial;
+  color: #000;
+}
+
+.container-wrapper {
+  margin: 0 auto;
 }
 
 /* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
+.tab-link {
+  background-color: #777;
   float: left;
   border: none;
   outline: none;
@@ -21,39 +21,21 @@ body, html {
   width: 25%;
 }
 
-.tablink:hover {
-  background-color: #777;
+.tab-link:hover {
+  background-color: #999;
 }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  /*color: white;*/
+/* Style the tab content */
+.tab-content {
   display: none;
   padding: 100px 20px;
-  height: 100%;
 }
 
-#Home {background-color: red;}
-#Forecast {background-color: green;}
-#SunMoon {background-color: orange;}
+#home {background-color: pink;}
+#forecast {background-color: green;}
+#sun-moon {background-color: orange;}
 #sun-div {background-color: yellow}
-#StarMap {background-color: blue;}
-
-
-.container-wrapper {
-  max-width: 500px;
-}
-
-
-
-
-
-
-
-
-
-
-
+#star-map {background-color: aqua;}
 
 /****************************/
 /** GLOBAL STYLES */
@@ -63,10 +45,6 @@ body {
   font-size: 16px;
 }
 
-main {
-  background-color: pink;
-}
-
 h1,
 h2,
 h3,
@@ -74,16 +52,15 @@ h4,
 h5 {
   text-transform: uppercase;  
   font-family: 'Montserrat Alternates', sans-serif;
-  margin: 8px;
+  margin: 0px;
 }
 
-h4 {
-  margin: 0;
+h1 {
+  font-size: 32px;
 }
 
 h5 {
   font-weight: 500;
-  margin: 0;
   padding: 0;
 }
 
@@ -95,21 +72,28 @@ h5 {
 .small-icon {
   font-size: 30px;
 }
-/* 
+
+
+  iframe {
+    width: 99%;
+    height: 60%;
+  }
+
+
 /****************************/
 /** HEADER STYLES */
 
 header {
   background-color: deepskyblue;
   padding: 10px;
-  margin: 0 -12px;
+  margin: 0;
 }
 
 /** SEARCH STYLES */
 /**********/
 .search {
   background-color: mediumblue;
-  margin: 0 -12px;
+  margin: 0;
   padding: 5px;
 }
 
