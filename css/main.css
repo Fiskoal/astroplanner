@@ -1,48 +1,18 @@
 /*:root {};*/
 
-body {
-  font-family: Arial;
-  color: #000;
-}
-
-.container-wrapper {
-  margin: 0 auto;
-}
-
-/* Style tab links */
-.tab-link {
-  background-color: #777;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tab-link:hover {
-  background-color: #999;
-}
-
-/* Style the tab content */
-.tab-content {
-  display: none;
-  padding: 100px 20px;
-}
-
 #home {background-color: pink;}
-#forecast {background-color: green;}
-#sun-moon {background-color: orange;}
-#sun-div {background-color: yellow}
-#star-map {background-color: aqua;}
+#forecast-content {background-color: green;}
+#sun-moon-content {background-color: orange;}
+#star-map-content {background-color: aqua;}
 
-/****************************/
-/** GLOBAL STYLES */
+/*******************/
+/** GLOBAL STYLES **/
+/*******************/
 body {
   /*font-family: 'Lato', sans-serif;*/
   font-family: 'Livvic', sans-serif;
   font-size: 16px;
+  color: #000;
 }
 
 h1,
@@ -73,15 +43,14 @@ h5 {
   font-size: 30px;
 }
 
+iframe {
+  width: 99%;
+  height: 60%;
+}
 
-  iframe {
-    width: 99%;
-    height: 60%;
-  }
-
-
-/****************************/
-/** HEADER STYLES */
+/*******************/
+/** HEADER STYLES **/
+/*******************/
 
 header {
   background-color: deepskyblue;
@@ -89,32 +58,68 @@ header {
   margin: 0;
 }
 
-/** SEARCH STYLES */
-/**********/
 .search {
   background-color: mediumblue;
   margin: 0;
   padding: 5px;
 }
 
-/****************************/
-/** WEATHER FORECAST STYLES */
+/**************************/
+/** TAB & CONTENT STYLES **/
+/**************************/
 
+.container-wrapper {
+  margin: 0 auto;
+}
 
-/****************************/
-/** SUN & MOON STYLES */
+/* Style tab links */
+.tab-link {
+  background-color: #777;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
 
-#sun-wrapper,
-#moon-wrapper,
-#moon-phase-wrapper,
+.tab-link:hover {
+  background-color: #999;
+}
+
+/* Style the tab content */
+.tab-content {
+  display: none;
+  padding: 100px 20px;
+}
+
+/*****************************/
+/** WEATHER FORECAST STYLES **/
+/*****************************/
 #weather-wrapper,
 #visibility-wrapper {
   margin: 10px 0;
   background-color: yellow;
 }
 
-/****************************/
-/** STAR MAP STYLES */
+/***********************/
+/** SUN & MOON STYLES **/
+/***********************/
+#sun-wrapper,
+#moon-wrapper,
+#moon-phase-wrapper {
+  margin: 10px 0;
+  background-color: yellow;
+}
+
+/*********************/
+/** STAR MAP STYLES **/
+/*********************/
 #map {
   background-color: aqua;
 } 
+
+/*******************/
+/** FOOTER STYLES **/
+/*******************/

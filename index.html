@@ -7,6 +7,7 @@
   <title>Astroplanner 🌠</title>
   <!-- Bootstrap 5's grid system -->
   <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
+
   <!-- Google Fonts  -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -14,14 +15,11 @@
     rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/83fba97459.js" crossorigin="anonymous"></script>
-  <!-- media queries -->
-  <!-- <link rel="stylesheet" href="css/media-query.css"> -->
+
   <!-- custom styles -->
   <link rel="stylesheet" href="css/css-grid.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/queries.css">
-
-
 </head>
 
 <body>
@@ -35,22 +33,21 @@
       </section>
     </header>
 
-
-
     <!-- tab buttons -->
     <div id="tab-buttons">
       <button class="tab-link" onclick="openPage('home', this, 'pink')">Home</button>
-      <button class="tab-link" onclick="openPage('forecast', this, 'green')" id="defaultOpen">Forecast</button>
-      <button class="tab-link" onclick="openPage('sun-moon', this, 'orange')">Sun/Moon</button>
-      <button class="tab-link" onclick="openPage('star-map', this, 'aqua')">Star Map</button>
-    </div>
-    <!-- tab content -->
-    <div id="home" class="tab-content">
-      <h3>Home</h3>
-      <p>Home is where the heart is..</p>
+      <button class="tab-link" onclick="openPage('forecast-content', this, 'green')" id="defaultOpen">Forecast</button>
+      <button class="tab-link" onclick="openPage('sun-moon-content', this, 'orange')">Sun/Moon</button>
+      <button class="tab-link" onclick="openPage('star-map-content', this, 'aqua')">Star Map</button>
     </div>
 
-    <div id="forecast" class="tab-content">
+    <!-- home tab content -->
+    <div id="home" class="tab-content">
+      <h3>Home</h3>
+      <p>Home is where the heart is...</p>
+    </div> <!-- end #home tab -->
+
+    <div id="forecast-content" class="tab-content">
 
       <div id="weather-wrapper">
         <!-- weather -->
@@ -76,9 +73,9 @@
           <p id="visibility-desc">Cloudy with chance of rain</p>
       </div><!-- end #visibility-wrapper-->
 
-    </div> <!-- end #forecast tab-->
+    </div> <!-- end #forecast-content tab -->
 
-    <div id="sun-moon" class="tab-content">
+    <div id="sun-moon-content" class="tab-content">
 
       <div id="sun-wrapper">
         <!-- sun info -->
@@ -93,7 +90,6 @@
           <h5 id="sunset-title" class="time-header">Sunset:</h5>
           <p id="sunset-time">17:48</p>
       </div><!-- end #sun-wrapper-->
-
       <div id="moon-wrapper">
         <!-- moon info -->
           <h5 id="moon-title">Moon:</h5>
@@ -107,7 +103,6 @@
           <p id="moonset-title">Moonset:</p>
           <p id="moonset-time">06:48</p>    
       </div><!-- end #moon-wrapper-->
-
       <div id="moon-phase-wrapper">
         <!-- moon phase -->
           <h5 id="moon-phase-title">Moon Phase:</h5>
@@ -115,22 +110,26 @@
           <i id="moon-phase-icon" class="fad fa-moon-stars small-icon"></i>
       </div><!-- end #moon-phase-wrapper-->     
 
-    </div> <!-- end #sun-moon-section-->
+    </div> <!-- end #sun-moon-content tab -->
 
-    <div id="star-map" class="tab-content">
-          <h3 id="map-header">Star map for:</h3>
-          <iframe id="map-img"></iframe>
-          <ul id="map-list">
-            <li class="map-list-item">List</li>
-            <li class="map-list-item">of</li>
-            <li class="map-list-item">objects</li>
-            <li class="map-list-item">here</li>
-          </ul>
-    </div>
+    <div id="star-map-content" class="tab-content">
+      <h3 id="map-header">Star map for:</h3>
+      <iframe id="map-img"></iframe>
+      <ul id="map-list">
+        <li class="map-list-item">List</li>
+        <li class="map-list-item">of</li>
+        <li class="map-list-item">objects</li>
+        <li class="map-list-item">here</li>
+      </ul>
+    </div> <!-- end #star-map-content tab -->
   </div>
 
+  <!-- <footer></footer> -->
+
+  <!-- scripts to run after DOM is created -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/skymap.js"></script>
+  <!-- custom script styles -->
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,16 +1,12 @@
-
 /** Smartphones **/
 @media screen and (min-width: 500px) {
-
   .container-wrapper {
     max-width: 500px;
   }
-
 }
 
-/** Tablets **/
+/** Tablets/Desktop **/
 @media screen and (min-width: 750px) {
-
   .container-wrapper {
     max-width: 1000px;
     display: grid;
@@ -18,37 +14,33 @@
     grid-template-rows: 90px 300px 450px;
   }
 
+  /** GRID STYLES **/
   header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
 
-  h1 {
-    font-size: 25px;
-  }
-
+  /* hide tab buttons */
   #tab-buttons,
   #home {
     display: none;
   }
 
-  #forecast,
-  #sun-moon,
-  #star-map {
+  /* create left sidebar */
+  #forecast-content,
+  #sun-moon-content,
+  #star-map-content {
     display: inline-block;
   }
-
-  #forecast {
+  #forecast-content {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
-
-  #sun-moon {
+  #sun-moon-content {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
-
-  #star-map {
+  #star-map-content {
     grid-column: 2 / 3;
     grid-row: 2 / 4;
   }
@@ -62,13 +54,15 @@
   }
 
   .tab-content {
-    display: none;
     padding: 15px 10px;
     height: 100%;
   }
+
+  h1 {
+    font-size: 25px;
+  }
+
 }
-
-
 
 /** Desktop **/
 @media screen and (min-width: 1000px) {}
