@@ -1,0 +1,69 @@
+/**************************************/
+/** ========= SUN & MOON =========== **
+/**************************************/
+#sun-wrapper,
+#moon-wrapper,
+#weather-wrapper {
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/** INFO **/
+#sun-title,
+#moon-title,
+#weather-title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#sun-img,
+#moon-img,
+#weather-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+/** RISE **/
+#sunrise-icon,
+#moonrise-icon,
+#evening-icon {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#sunrise-title,
+#moonrise-title,
+#evening-title {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#sunrise-time,
+#moonrise-time,
+#evening-time {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/** SET **/
+#sunset-icon,
+#moonset-icon,
+#night-icon {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+#sunset-title,
+#moonset-title,
+#night-title {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+#sunset-time,
+#moonset-time,
+#night-time {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
