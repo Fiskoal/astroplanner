@@ -16,7 +16,7 @@ $("#search-button").on("click", function () {
 
         $("#location-name").text(data.results[0].formatted);
 
-        $("#map-header").text("Star Map for " + data.results[0].geometry.lat + ", " + data.results[0].geometry.lng);
+        $("#map-header").text("Star Map for: " + data.results[0].geometry.lat + ", " + data.results[0].geometry.lng);
 
         let ra = 180 + data.results[0].geometry.lng
         let de = data.results[0].geometry.lat
