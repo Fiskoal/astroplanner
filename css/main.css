@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-/** Smartphones **/
-@media screen and (min-width: 500px) {
-  .container-wrapper {
-    max-width: 500px;
-  }
-}
-
-/** Tablets/Desktop **/
-@media screen and (min-width: 750px) {
-  .container-wrapper {
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: 35% 60%;
-    grid-template-rows: 90px 300px 450px;
-  }
-
-  /** GRID STYLES **/
-  header {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-  }
-
-  /* hide tab buttons */
-  #tab-buttons,
-  #home {
-    display: none;
-  }
-
-  /* create left sidebar */
-  #forecast-content,
-  #sun-moon-content,
-  #star-map-content {
-    display: inline-block;
-  }
-  #forecast-content {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  #sun-moon-content {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-  #star-map-content {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-  }
-
-  #sun-wrapper,
-  #moon-wrapper,
-  #moon-phase-wrapper,
-  #weather-wrapper,
-  #visibility-wrapper {
-    margin: 10px 0;
-  }
-
-  .tab-content {
-    padding: 15px 10px;
-    height: 100%;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-}
-
-/** Desktop **/
-@media screen and (min-width: 1000px) {}
-=======
 /*:root {};*/
 
 body {
@@ -188,4 +118,3 @@ header {
 #map {
   background-color: aqua;
 } 
->>>>>>> parent of eb639fe (cleans up code)
