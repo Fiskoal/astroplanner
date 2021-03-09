@@ -1,0 +1,79 @@
+
+/** Smartphones **/
+@media screen and (min-width: 500px) {
+
+  .container-wrapper {
+    max-width: 500px;
+  }
+
+}
+
+/** Tablets **/
+@media screen and (min-width: 750px) {
+
+  .container-wrapper {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: 90px 150px 150px 450px;
+  }
+
+  header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  #tab-buttons {
+    display: none;
+  }
+
+  #home,
+  #forecast,
+  #sun-moon,
+  #star-map {
+    display: inline-block;
+  }
+
+  #home {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+  }
+
+  #forecast {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  #sun-moon {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  #star-map {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+  }
+
+  #sun-wrapper,
+  #moon-wrapper,
+  #moon-phase-wrapper,
+  #weather-wrapper,
+  #visibility-wrapper {
+    margin: 10px 0;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 15px 10px;
+    height: 100%;
+  }
+}
+
+
+
+/** Desktop **/
+@media screen and (min-width: 1000px) {}
