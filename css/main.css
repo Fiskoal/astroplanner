@@ -1,5 +1,7 @@
 /*:root {};*/
 
+/*******************/
+/** GLOBAL STYLES **/
 body {
   font-family: Arial;
   color: #000;
@@ -8,6 +10,46 @@ body {
 .container-wrapper {
   margin: 0 auto;
 }
+
+body {
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Livvic', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h3,
+h4 {
+  text-transform: uppercase;  
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 0px;
+}
+
+
+h1 {
+  font-size: 32px;
+}
+
+.large-icon,
+#moon-phase {
+  font-size: 60px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.small-icon {
+  font-size: 30px;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+iframe {
+  width: 99%;
+  height: 60%;
+}
+
+/*********************/
+/** TAB LINK STYLES **/
 
 /* Style tab links */
 .tab-link {
@@ -37,51 +79,8 @@ body {
 #sun-div {background-color: yellow}
 #star-map {background-color: aqua;}
 
-/****************************/
-/** GLOBAL STYLES */
-body {
-  /*font-family: 'Lato', sans-serif;*/
-  font-family: 'Livvic', sans-serif;
-  font-size: 16px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  text-transform: uppercase;  
-  font-family: 'Montserrat Alternates', sans-serif;
-  margin: 0px;
-}
-
-h1 {
-  font-size: 32px;
-}
-
-h5 {
-  font-weight: 500;
-  padding: 0;
-}
-
-.large-icon,
-#moon-phase {
-  font-size: 60px;
-}
-
-.small-icon {
-  font-size: 30px;
-}
-
-
-  iframe {
-    width: 99%;
-    height: 60%;
-  }
-
-
-/****************************/
-/** HEADER STYLES */
+/*******************/
+/** HEADER STYLES **/
 
 header {
   background-color: deepskyblue;
@@ -89,20 +88,17 @@ header {
   margin: 0;
 }
 
-/** SEARCH STYLES */
-/**********/
 .search {
   background-color: mediumblue;
   margin: 0;
   padding: 5px;
 }
 
-/****************************/
-/** WEATHER FORECAST STYLES */
+/*****************************/
+/** WEATHER FORECAST STYLES **/
 
-
-/****************************/
-/** SUN & MOON STYLES */
+/***********************/
+/** SUN & MOON STYLES **/
 
 #sun-wrapper,
 #moon-wrapper,
@@ -113,8 +109,14 @@ header {
   background-color: yellow;
 }
 
-/****************************/
-/** STAR MAP STYLES */
+#sun-wrapper,
+#moon-wrapper,
+#weather-wrapper {
+  text-align: center;
+}
+
+/*********************/
+/** STAR MAP STYLES **/
 #map {
   background-color: aqua;
 } 

@@ -22,21 +22,18 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/queries.css">
 
-
 </head>
 
 <body>
   <div class="container-wrapper">
     <header>
       <h1 id="location-header">Location</h1>
-      <h5 id="location-name">&nbsp;</h5>
+      <h4 id="location-name">&nbsp;</h4>
       <section class="search">
         <input type="text" id="search-bar" placeholder="Enter a city name...">
         <button id="search-button">🔍</button>
       </section>
     </header>
-
-
 
     <!-- tab buttons -->
     <div id="tab-buttons">
@@ -48,56 +45,52 @@
     <!-- tab content -->
     <div id="home" class="tab-content">
       <h3>Home</h3>
-      <p>Home is where the heart is..</p>
+      <p>Greet the user and explain stuff here, maybe.</p>
     </div>
 
     <div id="forecast" class="tab-content">
-
       <div id="weather-wrapper">
         <!-- weather -->
-        <h4 id="weather-title">Weather:</h4>
+        <h3 id="weather-title">Weather:</h3>
         <i id="weather-img" class="large-icon fad fa-clouds large-icon"></i>
         <!-- evening -->
         <i id="evening-icon" class="small-icon fad fa-clouds small-icon"></i>
-        <h5 id="evening-title" class="time-header">Evening:</h5>
+        <h4 id="evening-title" class="time-header">Evening:</h4>
         <p id="evening-time">
           7pm
         </p>
         <!-- night -->
         <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon"></i>
-        <h5 id="night-title" class="time-header">Night:</h5>
+        <h4 id="night-title" class="time-header">Night:</h4>
         <p id="night-time">
           11p
         </p>
       </div> <!-- end #weather-wrapper-->
       <div id="visibility-wrapper">
         <!-- visibility phase -->
-        <h4 id="visibility-title">Visibility:</h4>
+        <h3 id="visibility-title">Visibility:</h3>
         <p id="visibility-label">Poor</p>
         <p id="visibility-desc">Cloudy with chance of rain</p>
       </div><!-- end #visibility-wrapper-->
-
     </div> <!-- end #forecast tab-->
 
     <div id="sun-moon" class="tab-content">
-
       <div id="sun-wrapper">
         <!-- sun info -->
-        <h4 id="sun-title">Sun:</h4>
+        <h3 id="sun-title">Sun:</h3>
         <i id="sun-img" class="fad fa-sun large-icon"></i>
         <!-- sunrise -->
         <i id="sunrise-icon" class="fad fa-sunrise small-icon"></i>
-        <h5 id="sunrise-title" class="time-header">Sunrise:</h5>
+        <h4 id="sunrise-title" class="time-header">Sunrise:</h4>
         <p id="sunrise-time">06:48</p>
         <!-- sunset -->
         <i id="sunset-icon" class="fad fa-sunset small-icon"></i>
-        <h5 id="sunset-title" class="time-header">Sunset:</h5>
+        <h4 id="sunset-title" class="time-header">Sunset:</h4>
         <p id="sunset-time">17:48</p>
       </div><!-- end #sun-wrapper-->
-
       <div id="moon-wrapper">
         <!-- moon info -->
-        <h5 id="moon-title">Moon:</h5>
+        <h3 id="moon-title">Moon:</h3>
         <i id="moon-img" class="fad fa-moon-stars large-icon"></i>
         <!-- moonrise -->
         <i id="moonrise-icon" class="fad fa-moon-stars small-icon"></i>
@@ -108,14 +101,12 @@
         <p id="moonset-title">Moonset:</p>
         <p id="moonset-time">06:48</p>
       </div><!-- end #moon-wrapper-->
-
       <div id="moon-phase-wrapper">
         <!-- moon phase -->
-        <h5 id="moon-phase-title">Moon Phase:</h5>
+        <h3 id="moon-phase-title">Moon Phase:</h3>
         <p id="moon-phase-label">Crescent</p>
-        <i id="moon-phase-icon" class="fad fa-moon-stars small-icon"></i>
+        <i id="moon-phase-icon" class="fad fa-moon-stars medium-icon"></i>
       </div><!-- end #moon-phase-wrapper-->
-
     </div> <!-- end #sun-moon-section-->
 
     <div id="star-map" class="tab-content">

@@ -6,15 +6,21 @@
     max-width: 500px;
   }
 
+  #home,
+  #forecast,
+  #sun-moon,
+  #star-map {
+    display: none;
+  }
 }
 
 /** Tablets **/
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
 
   .container-wrapper {
     max-width: 1000px;
     display: grid;
-    grid-template-columns: 35% 60%;
+    grid-template-columns: 42% 58%;
     grid-template-rows: 90px 150px 150px 450px;
   }
 
@@ -25,6 +31,11 @@
 
   h1 {
     font-size: 25px;
+  }
+
+  h3 {
+    font-size: 14px;
+    text-decoration: underline;
   }
 
   #tab-buttons {
@@ -73,7 +84,11 @@
   }
 }
 
+/** Wider Tablets/Desktop **/
+@media screen and (min-width: 800px) {
 
-
-/** Desktop **/
-@media screen and (min-width: 1000px) {}
+  h3 {
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
