@@ -15,7 +15,7 @@
     max-width: 1000px;
     display: grid;
     grid-template-columns: 35% 60%;
-    grid-template-rows: 90px 300px 450px;
+    grid-template-rows: 90px 150px 150px 450px;
   }
 
   header {
@@ -27,30 +27,35 @@
     font-size: 25px;
   }
 
-  #tab-buttons,
-  #home {
+  #tab-buttons {
     display: none;
   }
 
+  #home,
   #forecast,
   #sun-moon,
   #star-map {
     display: inline-block;
   }
 
+  #home {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+  }
+
   #forecast {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
   }
 
   #sun-moon {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
   }
 
   #star-map {
     grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    grid-row: 3 / 5;
   }
 
   #sun-wrapper,
