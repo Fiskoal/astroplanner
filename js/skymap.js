@@ -16,12 +16,12 @@ $("#search-button").on("click", function () {
 
         $("#location-name").text(data.results[0].formatted);
 
-        $("#map-header").text("Star Map for " + data.results[0].geometry.lat + ", " + data.results[0].geometry.lng);
+        $("#map-header").text("Star Map for: " + data.results[0].geometry.lat + ", " + data.results[0].geometry.lng);
 
         let ra = 180 + data.results[0].geometry.lng
         let de = data.results[0].geometry.lat
 
-        $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0")
+        $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
         // fetch("http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&angle=30&max_stars=1000&max_vmag=5", {
         //   mode: "no-cors"
