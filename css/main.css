@@ -89,7 +89,7 @@ header {
 }
 
 /* Style the tab content */
-.tab-content {
+.tabcontent {
   display: none;
   padding: 100px 20px;
 }

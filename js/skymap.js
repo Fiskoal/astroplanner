@@ -21,7 +21,11 @@ $("#search-button").on("click", function () {
         let ra = 180 + data.results[0].geometry.lng
         let de = data.results[0].geometry.lat
 
+<<<<<<< HEAD
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=-2")
+=======
+        $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0")
+>>>>>>> 82c88c147ba0495364029b42938f60f258605284
 
         // fetch("http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&angle=30&max_stars=1000&max_vmag=5", {
         //   mode: "no-cors"
