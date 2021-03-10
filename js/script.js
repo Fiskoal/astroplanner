@@ -25,8 +25,10 @@ function openPage(pageName, element, color) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
+// document.getElementById("defaultOpen").click();
+if (window.innerWidth <= 750) {
+  document.getElementById("defaultOpen").click();
+}
 //=================================================
 //previous searches
 
