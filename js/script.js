@@ -1,16 +1,30 @@
+// ! for JavaScript to work, add dashes to the class names on lines 11 & 17
+
+
 function openPage(pageName, element, color) {
+//? onclick = "openPage('forecast', this, 'green')
+
+  // declares variables;
   var i, tabContent, tabLinks;
-  tabContent = document.getElementsByClassName("tabcontent");
+
+  // loops through all <div> elements with .tab-content class, hides them as default
+  tabContent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabContent.length; i++) {
     tabContent[i].style.display = "none";
   }
-  tabLinks = document.getElementsByClassName("tablink");
+
+  // loops through all <button> elements with .tab-link class, empties background color.
+  tabLinks = document.getElementsByClassName("tab-link");
   for (i = 0; i < tabLinks.length; i++) {
     tabLinks[i].style.backgroundColor = "";
   }
+
+  // takes page and displays as block element, adds color to the tab button
   document.getElementById(pageName).style.display = "block";
   element.style.backgroundColor = color;
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+// 'media query' for small screens, finds <button> with #defaultOpen id and clicks it
+if (window.innerWidth < 750) {
+  document.getElementById("defaultOpen").click();
+}
