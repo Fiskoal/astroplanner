@@ -1,7 +1,11 @@
 // ***** ACCESS ASTRONOMY API
 const apiAstro = {
   key: 'f19a0b3ef89541fc86e5a367eddf220e',
-  base: 'https://api.ipgeolocation.io/',
+  base: 'https://api.ipgeolocation.io/'
+};
+const apiMoon = {
+  key: 'F8FKBZ5J85TFBX3ZATBURMFXW',
+  base: 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/timeline'
 };
 
 $("#search-button").on("click", function () {
@@ -28,27 +32,28 @@ $("#search-button").on("click", function () {
         let de = data.results[0].geometry.lat;
 
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
-      
+
 
         // ***** ACCESS IPGEOLOCATION.IO ASTRONOMY API
 
         console.log(data.results[0].geometry.lng);
         console.log(data.results[0].geometry.lat);
 
-        let astroAPIlink = `${apiAstro.base}/astronomy?apiKey=${apiAstro.key}&lat=${data.results[0].geometry.lat}&long=${data.results[0].geometry.lng}`;
+        let astroAPILink = `${apiAstro.base}/astronomy?apiKey=${apiAstro.key}&lat=${data.results[0].geometry.lat}&long=${data.results[0].geometry.lng}`;
 
-        fetch(astroAPIlink)
+        fetch(astroAPILink)
           .then(function (response) {
             console.log(response);
             return response.json();
           })
-          .then(data => {
-            console.log("data is ", data);
+          .then(data2 => {
+            console.log("data is: ");
+            console.log(data2);
             // links javascript to API data
-            let sunriseTime = data.sunrise;
-            let sunsetTime = data.sunset;
-            let moonriseTime = data.moonrise;
-            let moonsetTime = data.moonset;
+            let sunriseTime = data2.sunrise;
+            let sunsetTime = data2.sunset;
+            let moonriseTime = data2.moonrise;
+            let moonsetTime = data2.moonset;
             // links javascript to HTML elements
             let sunriseDisplay = document.querySelector('#sunrise-time');
             let sunsetDisplay = document.querySelector('#sunset-time');
@@ -60,8 +65,34 @@ $("#search-button").on("click", function () {
             moonriseDisplay.innerHTML = moonriseTime;
             moonsetDisplay.innerHTML = moonsetTime;
             console.log('sunrise', sunriseTime);
-          });
-      });
 
+            // ***** ACCESS VISUALCROSSING.COM MOON PHASE API
+
+            console.log(data);
+            console.log(data.results[0].geometry.lng);
+            console.log(data.results[0].geometry.lat);
+            console.log(data.results[0].geometry.lat);
+
+            let moonAPILink = `${apiMoon.base}?includeAstronomy=true&key=${apiMoon.key}&period=today&contentType=json&locations=${data.results[0].geometry.lat}%2C%20${data.results[0].geometry.lng}`;
+            console.log(moonAPILink);
+
+            fetch(moonAPILink)
+              .then(function (response) {
+                console.log(response);
+                return response.json();
+              })
+              .then(data3 => {
+                console.log("====================");
+                console.log("data is: ");
+                console.log(data3);
+                console.log(data3.days[0].moonphase);
+                console.log("====================");
+                //// links javascript to API data
+                //let sunriseTime = data.sunrise;
+                ////let sunriseTime = data.sunrise;
+              });
+          });
+
+      });
     });
-    });
+});
