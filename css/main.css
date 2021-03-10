@@ -32,7 +32,7 @@ h1 {
 
 .large-icon,
 #moon-phase {
-  font-size: 60px;
+  font-size: 50px;
   margin: 0 auto;
   vertical-align: middle;
 }
@@ -113,6 +113,15 @@ header {
 #moon-wrapper,
 #weather-wrapper {
   text-align: center;
+}
+
+#sunrise-title,
+#moonrise-title,
+#evening-title,
+#sunset-title,
+#moonset-title,
+#night-title {
+  padding-top: 10px;
 }
 
 /*********************/
