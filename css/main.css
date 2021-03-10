@@ -118,3 +118,24 @@ header {
 #map {
   background-color: aqua;
 } 
+
+
+/****************************/
+/* Previous Searches */
+#previousSearches {
+  position: absolute;
+  background-color: white;
+  height: fit-content;
+  width: 200px;
+  z-index: 1;
+}
+
+#previousSearches p {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.searchItem:hover {
+  background-color: gray;
+}

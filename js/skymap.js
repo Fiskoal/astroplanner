@@ -23,7 +23,7 @@ $("#search-button").on("click", function () {
 
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
-        // fetch("http://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&angle=30&max_stars=1000&max_vmag=5", {
+        // fetch("https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&angle=30&max_stars=1000&max_vmag=5", {
         //   mode: "no-cors"
         // }
         // )
