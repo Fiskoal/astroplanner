@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Astroplanner 🌠</title>
-  <!-- Bootstrap 5's grid system -->
-  <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
   <!-- Google Fonts  -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -15,8 +13,9 @@
     rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/83fba97459.js" crossorigin="anonymous"></script>
-  <!-- media queries -->
-  <!-- <link rel="stylesheet" href="css/media-query.css"> -->
+  <!-- Pure.css framework -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
+    integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
   <!-- custom styles -->
   <link rel="stylesheet" href="css/css-grid.css">
   <link rel="stylesheet" href="css/main.css">
@@ -25,101 +24,107 @@
 </head>
 
 <body>
-  <div class="container-wrapper">
-    <header>
-      <h1 id="location-header">Location</h1>
-      <h4 id="location-name">&nbsp;</h4>
-      <section class="search">
-        <input type="text" id="search-bar" placeholder="Enter a city name...">
-        <button id="search-button">🔍</button>
-      </section>
-    </header>
+  <div id="background-shader">
+    <div class="container-wrapper">
+      <header>
+        <h1 id="location-header">Location:</h1><br>
+        <h4 id="location-name">&nbsp;</h4>
 
-    <!-- tab buttons -->
-    <div id="tab-buttons">
-      <button class="tab-link" onclick="openPage('home', this, 'pink')">Home</button>
-      <button class="tab-link" onclick="openPage('forecast', this, 'green')" id="defaultOpen">Forecast</button>
-      <button class="tab-link" onclick="openPage('sun-moon', this, 'orange')">Sun/Moon</button>
-      <button class="tab-link" onclick="openPage('star-map', this, 'aqua')">Star Map</button>
-    </div>
-    <!-- tab content -->
-    <div id="home" class="tab-content">
-      <h3>Home</h3>
-      <p>Greet the user and explain stuff here, maybe.</p>
-    </div>
+        <section class="search">
+          <input type="text" id="search-bar" placeholder="Enter a city name...">
+          <button id="search-button">🔍</button>
+        </section>
+      </header>
 
-    <div id="forecast" class="tab-content">
-      <div id="weather-wrapper">
-        <!-- weather -->
-        <h3 id="weather-title">Weather:</h3>
-        <i id="weather-img" class="large-icon fad fa-clouds large-icon"></i>
-        <!-- evening -->
-        <i id="evening-icon" class="small-icon fad fa-clouds small-icon"></i>
-        <h4 id="evening-title" class="time-header">Evening:</h4>
-        <p id="evening-time">
-          7pm
-        </p>
-        <!-- night -->
-        <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon"></i>
-        <h4 id="night-title" class="time-header">Night:</h4>
-        <p id="night-time">
-          11p
-        </p>
-      </div> <!-- end #weather-wrapper-->
-      <div id="visibility-wrapper">
-        <!-- visibility phase -->
-        <h3 id="visibility-title">Visibility:</h3>
-        <p id="visibility-label">Poor</p>
-        <p id="visibility-desc">Cloudy with chance of rain</p>
-      </div><!-- end #visibility-wrapper-->
-    </div> <!-- end #forecast tab-->
+      <!-- tab buttons -->
+      <div id="tab-buttons">
+        <button class="tab-link" onclick="openPage('home', this, 'var(--color-highlight)')">Home</button>
+        <button class="tab-link" onclick="openPage('forecast', this, 'var(--color-highlight)')" id="defaultOpen">Forecast</button>
+        <button class="tab-link" onclick="openPage('sun-moon', this, 'var(--color-highlight)')">Sun/Moon</button>
+        <button class="tab-link" onclick="openPage('star-map', this, 'var(--color-highlight)')">Star Map</button>
+      </div>
+      <!-- tab content -->
+      <div id="home" class="tab-content">
+        <h2>AstroPlanner</h2>
+        <div id="welcome">
+          <p>Welcome to AstroPlanner!</p>
+          <p>Here you can find out when the sun & moon rise and set at your location, as well as how clear the night sky
+            is above you.</p>
+          <p>AstroPlanner also generates a star map for you so that you have everything you need to go star-gazing!</p>
+        </div>
+      </div>
 
-    <div id="sun-moon" class="tab-content">
-      <div id="sun-wrapper">
-        <!-- sun info -->
-        <h3 id="sun-title">Sun:</h3>
-        <i id="sun-img" class="fad fa-sun large-icon"></i>
-        <!-- sunrise -->
-        <i id="sunrise-icon" class="fad fa-sunrise small-icon"></i>
-        <h4 id="sunrise-title" class="time-header">Sunrise:</h4>
-        <p id="sunrise-time">&nbsp;</p>
-        <!-- sunset -->
-        <i id="sunset-icon" class="fad fa-sunset small-icon"></i>
-        <h4 id="sunset-title" class="time-header">Sunset:</h4>
-        <p id="sunset-time">&nbsp;</p>
-      </div><!-- end #sun-wrapper-->
-      <div id="moon-wrapper">
-        <!-- moon info -->
-        <h3 id="moon-title">Moon:</h3>
-        <i id="moon-img" class="fad fa-moon-stars large-icon"></i>
-        <!-- moonrise -->
-        <i id="moonrise-icon" class="fad fa-moon-stars small-icon"></i>
-        <h4 id="moonrise-title">Moonrise:</h4>
-        <p id="moonrise-time">&nbsp;</p>
-        <!-- moonset -->
-        <i id="moonset-icon" class="fad fa-moon-stars small-icon"></i>
-        <h4 id="moonset-title">Moonset:</h4>
-        <p id="moonset-time">&nbsp;</p>
-      </div><!-- end #moon-wrapper-->
-      <div id="moon-phase-wrapper">
-        <!-- moon phase -->
-        <h3 id="moon-phase-title">Moon Phase:</h3>
-        <p id="moon-phase-label">Crescent</p>
-        <i id="moon-phase-icon" class="fad fa-moon-stars medium-icon"></i>
-      </div><!-- end #moon-phase-wrapper-->
-    </div> <!-- end #sun-moon-section-->
+      <div id="forecast" class="tab-content">
+        <div id="weather-wrapper" class="general-wrapper">
+          <!-- weather -->
+          <h3 id="weather-title">Weather:</h3>
+          <i id="weather-img" class="large-icon fad fa-clouds large-icon theme-cloud"></i>
+          <!-- evening -->
+          <i id="evening-icon" class="small-icon fad fa-clouds small-icon theme-cloud"></i>
+          <h4 id="evening-title" class="time-header">Evening:</h4>
+          <p id="evening-time">
+            7pm
+          </p>
+          <!-- night -->
+          <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon theme-cloud"></i>
+          <h4 id="night-title" class="time-header">Night:</h4>
+          <p id="night-time">
+            11p
+          </p>
+        </div> <!-- end #weather-wrapper-->
+        <div id="visibility-wrapper" class="general-wrapper">
+          <!-- visibility phase -->
+          <h3 id="visibility-title">Visibility:</h3>
+          <h4 id="visibility-label">Poor</h4>
+          <p id="visibility-desc">Cloudy with chance of rain</p>
+        </div><!-- end #visibility-wrapper-->
+      </div> <!-- end #forecast tab-->
 
-    <div id="star-map" class="tab-content">
-          <h3 id="map-header">Star map for:</h3>
-          <iframe id="map-img"></iframe>
-          <ul id="map-list">
-            <li class="map-list-item">List</li>
-            <li class="map-list-item">of</li>
-            <li class="map-list-item">objects</li>
-            <li class="map-list-item">here</li>
-          </ul>
+      <div id="sun-moon" class="tab-content">
+        <div id="sun-wrapper" class="general-wrapper">
+          <!-- sun info -->
+          <h3 id="sun-title">Sun:</h3>
+          <i id="sun-img" class="fad fa-sun large-icon theme-sun"></i>
+          <!-- sunrise -->
+          <i id="sunrise-icon" class="fad fa-sunrise small-icon theme-sun"></i>
+          <h4 id="sunrise-title" class="time-header">Sunrise:</h4>
+          <p id="sunrise-time">&nbsp;</p>
+          <!-- sunset -->
+          <i id="sunset-icon" class="fad fa-sunset small-icon theme-sun"></i>
+          <h4 id="sunset-title" class="time-header">Sunset:</h4>
+          <p id="sunset-time">&nbsp;</p>
+        </div><!-- end #sun-wrapper-->
+        <div id="moon-wrapper" class="general-wrapper">
+          <!-- moon info -->
+          <h3 id="moon-title">Moon:</h3>
+          <i id="moon-img" class="fad fa-moon-stars large-icon theme-moon"></i>
+          <!-- moonrise -->
+          <i id="moonrise-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
+          <h4 id="moonrise-title">Moonrise:</h4>
+          <p id="moonrise-time">&nbsp;</p>
+          <!-- moonset -->
+          <i id="moonset-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
+          <h4 id="moonset-title">Moonset:</h4>
+          <p id="moonset-time">&nbsp;</p>
+        </div><!-- end #moon-wrapper-->
+        <div id="moon-phase-wrapper" class="general-wrapper">
+          <!-- moon phase -->
+          <h3 id="moon-phase-title">Moon Phase:</h3>
+          <h4 id="moon-phase-label">Crescent</h4>
+          <i id="moon-phase-icon" class="fad fa-moon-stars large-icon"></i>
+        </div><!-- end #moon-phase-wrapper-->
+      </div> <!-- end #sun-moon-section-->
+
+      <div id="star-map" class="tab-content">
+        <h3 id="map-header">Star map for:</h3>
+        <iframe id="map-img"></iframe>
+      </div>
     </div>
   </div>
+
+  <footer>
+    <a href="https://www.vecteezy.com/free-vector/moon">Moon Phase Vectors by Vecteezy</a>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/skymap.js"></script>
