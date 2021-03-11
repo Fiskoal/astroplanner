@@ -6,16 +6,22 @@
     max-width: 500px;
   }
 
+  #home,
+  #forecast,
+  #sun-moon,
+  #star-map {
+    display: none;
+  }
 }
 
 /** Tablets **/
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
 
   .container-wrapper {
     max-width: 1000px;
     display: grid;
-    grid-template-columns: 35% 60%;
-    grid-template-rows: 90px 150px 150px 450px;
+    grid-template-columns: 42% 58%;
+    grid-template-rows: 70px auto auto auto;
   }
 
   header {
@@ -27,8 +33,18 @@
     font-size: 25px;
   }
 
+  h3 {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
   #tab-buttons {
     display: none;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 15px 10px;
   }
 
   #home,
@@ -45,35 +61,51 @@
 
   #forecast {
     grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
   }
 
   #sun-moon {
     grid-column: 1 / 2;
-    grid-row: 4 / 5;
+    grid-row: 3 / 5;
   }
 
   #star-map {
     grid-column: 2 / 3;
-    grid-row: 3 / 5;
+    grid-row: 3 / 6;
   }
 
   #sun-wrapper,
   #moon-wrapper,
-  #moon-phase-wrapper,
-  #weather-wrapper,
+  #weather-wrapper {
+    margin: 10px 0 20px;
+  }
+
   #visibility-wrapper {
+    margin: 10px 0 5px;
+  }
+
+  #moon-phase-wrapper {
     margin: 10px 0;
   }
 
-  .tab-content {
-    display: none;
-    padding: 15px 10px;
-    height: 100%;
+  #forecast {
+    padding: 25px 12px 5px;
+  }
+
+  #sun-moon {
+    padding: 5px 12px;
+  }
+
+  #star-map {
+    margin: 10px 0 0 10px; 
   }
 }
 
+/** Wider Tablets/Desktop **/
+@media screen and (min-width: 800px) {
 
-
-/** Desktop **/
-@media screen and (min-width: 1000px) {}
+  h3 {
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
