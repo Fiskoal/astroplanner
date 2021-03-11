@@ -1,4 +1,4 @@
-// ***** ACCESS ASTRONOMY API
+// ***** API ACCESS *========================
 const apiAstro = {
   key: 'f19a0b3ef89541fc86e5a367eddf220e',
   base: 'https://api.ipgeolocation.io/'
@@ -7,7 +7,9 @@ const apiMoon = {
   key: 'F8FKBZ5J85TFBX3ZATBURMFXW',
   base: 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/timeline'
 };
+//*==========================================
 
+// ACCESS SKYMAP API DATA
 $("#search-button").on("click", function () {
   fetch("https://api.opencagedata.com/geocode/v1/json?q=" + $("#search-bar").val().replace(" ", "%20") + "&key=fb50173e34c341a88957c0a94c3f2032&pretty=1")
     .then(function (response) {
@@ -34,11 +36,9 @@ $("#search-button").on("click", function () {
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
 
-        // ***** ACCESS IPGEOLOCATION.IO ASTRONOMY API
-
-        console.log(data.results[0].geometry.lng);
-        console.log(data.results[0].geometry.lat);
-
+        // ACCESS IPGEOLOCATION.IO API DATA
+          //console.log(data.results[0].geometry.lng);
+          //console.log(data.results[0].geometry.lat);
         let astroAPILink = `${apiAstro.base}/astronomy?apiKey=${apiAstro.key}&lat=${data.results[0].geometry.lat}&long=${data.results[0].geometry.lng}`;
 
         fetch(astroAPILink)
@@ -66,13 +66,9 @@ $("#search-button").on("click", function () {
             moonsetDisplay.innerHTML = moonsetTime;
             console.log('sunrise', sunriseTime);
 
-            // ***** ACCESS VISUALCROSSING.COM MOON PHASE API
-
-            console.log(data);
-            console.log(data.results[0].geometry.lng);
-            console.log(data.results[0].geometry.lat);
-            console.log(data.results[0].geometry.lat);
-
+            // ACCESS VISUALCROSSING.COM MOON PHASE API DATA
+              //console.log(data);
+              //console.log(data.results[0].geometry.lng);
             let moonAPILink = `${apiMoon.base}?includeAstronomy=true&key=${apiMoon.key}&period=today&contentType=json&locations=${data.results[0].geometry.lat}%2C%20${data.results[0].geometry.lng}`;
             console.log(moonAPILink);
 
@@ -82,15 +78,84 @@ $("#search-button").on("click", function () {
                 return response.json();
               })
               .then(data3 => {
+                // console.log(data3);
+                // links javascript to API data
+                let moonPhaseValue = data3.currentConditions.moonphase;
+                // links javascript to HTML elements
+                let moonPhaseDisplay = document.querySelector('_____');
+                // updates html text
+                //moonPhaseDisplay.innerHTML = '<img src="icon/_____.png" alt="moon phase" id="moon-phase-icon">';
+                
                 console.log("====================");
-                console.log("data is: ");
-                console.log(data3);
-                console.log(data3.days[0].moonphase);
-                console.log("====================");
-                //// links javascript to API data
-                //let sunriseTime = data.sunrise;
-                ////let sunriseTime = data.sunrise;
+                console.log("moon phase value is: ");
+                //console.log(moonPhaseValue);
+
+                // determines which icon and title to display
+                whichPhase(moonPhaseValue);
+                function whichPhase() {
+                  if ((moonPhaseValue === 0) || (moonPhaseValue === 1)) {
+                    console.log('new-moon');
+                    let phaseIcon = "new";
+                    let phaseText = "waxing crescent";
+
+                  } else if (moonPhaseValue <= 0.125) {
+                    console.log('<= 0.125');
+                    let phaseIcon = "m125";
+                    let phaseText = "waxing crescent";
+
+                  } else if (moonPhaseValue <= 0.25) {
+                    console.log('<= 0.250');
+                    let phaseIcon = "m250";
+                    let phaseText = "first quarter";
+
+                  } else if (moonPhaseValue <= 0.375) {
+                    console.log('<= 0.375');
+                    let phaseIcon = "m375";
+                    let phaseText = "waxing gibbous";
+
+                  } else if (moonPhaseValue <= 0.499) {
+                    console.log('<= 0.499');
+                    let phaseIcon = "m499";
+                    let phaseText = "waxing gibbous";
+
+                  } else if (moonPhaseValue === 0.500) {
+                    console.log('full-moon');
+                    let phaseIcon = "mfull";
+                    let phaseText = "waxing gibbous";
+
+                  } else if (moonPhaseValue <= 0.625) {
+                    console.log('<= 0.625');
+                    let phaseIcon = "m625";
+                    let phaseText = "waxing gibbous";
+
+                  } else if (moonPhaseValue <= 0.75) {
+                    console.log('<= 0.750');
+                    let phaseIcon = "m750";
+                    let phaseText = "last quarter";
+
+                  } else if (moonPhaseValue <= 0.875) {
+                    console.log('<= 0.875');
+                    let phaseIcon = "m875";
+                    let phaseText = "waning crescent";
+
+                  } else if (moonPhaseValue <= 0.999) {
+                    console.log('<= 0.999');
+                    let phaseIcon = "m999";
+                    let phaseText = "waning crescent";
+
+                  }  else {
+                    console.log('whoops!');
+                  }
+                };
+
+                // displays current phase icon and text in HTML
+                function loadPhase(){
+                  document.getElementById('moon-phase-icon').src = `icon/${phaseIcon}.png`;
+                  document.getElementById('moon-phase-title').textContent = `${phaseText}`;
+                }
+                
               });
+
           });
 
       });
