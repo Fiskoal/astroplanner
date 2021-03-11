@@ -1,33 +1,90 @@
-/*:root {};*/
+:root {
+  --color-highlight: #bb92af;
+  --wrapper-border: #ccc;
+  /*dark blue is: rgba(2, 5, 43, 0.4)*/
+}
+
+/*************************/
+/** ICON THEME COLORING **/
+
+.theme-sun {
+  --fa-primary-color: orange;
+  --fa-secondary-color: yellow;
+}
+.theme-moon {
+  --fa-primary-color: lightblue ;
+  --fa-secondary-color: deepskyblue;
+}
+
+.theme-cloud {
+  --fa-primary-color: plum;
+  --fa-secondary-color: plum;
+}
+
+/* .theme-rain {
+  --fa-primary-color: ;
+  --fa-secondary-color: ;
+}
+.theme-snow {
+  --fa-primary-color: powderblue ;
+  --fa-secondary-color: ;
+} */
 
 /*******************/
 /** GLOBAL STYLES **/
 body {
-  font-family: Arial;
-  color: #000;
+  color: #fff;
+  font-family: 'Livvic', Arial, sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  /* background-color is in case the image does not load, user still gets a dark background*/
+  background-color: #330867; 
+
+  /** Background Option 1: **/
+  background: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1387&q=80") center no-repeat #333;
+  background-size: cover;
+  height: 90vh;
+
+  /** Background Option 2: **/
+  /* background: url("https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80") center no-repeat #333;
+  background-size: cover;
+  height: 100vh; */
+
+  /** Background Option 3: **/
+  /* background: url("https://images.unsplash.com/photo-1505609784087-749ad048763e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80") center no-repeat #333;
+  background-size: cover;
+  height: 100vh;  */
 }
+
+#background-shader {
+/* second color in linear gradient is in #RGBA format*/
+  background-image: linear-gradient(#222, #4444);
+  height: 97vh;
+} 
 
 .container-wrapper {
   margin: 0 auto;
-}
 
-body {
-  /*font-family: 'Lato', sans-serif;*/
-  font-family: 'Livvic', sans-serif;
-  font-size: 16px;
 }
 
 h1,
+h2,
 h3,
 h4 {
   text-transform: uppercase;  
   font-family: 'Montserrat Alternates', sans-serif;
   margin: 0px;
+  display: inline-block;
 }
-
 
 h1 {
   font-size: 32px;
+  padding: 2px 0 8px;
+}
+
+h2 {
+  padding-left: 15px;
+  margin-bottom: 10px;
 }
 
 .large-icon,
@@ -43,13 +100,12 @@ h1 {
   padding-top: 10%;
 }
 
-iframe {
-  width: 99%;
-  height: 60%;
-}
-
 /*********************/
 /** TAB LINK STYLES **/
+
+#tab-buttons {
+  margin: 0 0 20px 10px;
+}
 
 /* Style tab links */
 .tab-link {
@@ -60,7 +116,8 @@ iframe {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 25%;
+  width: 23%;
+  margin: 0px 2px;
 }
 
 .tab-link:hover {
@@ -70,45 +127,91 @@ iframe {
 /* Style the tab content */
 .tab-content {
   display: none;
-  padding: 100px 20px;
+  padding: 60px 5px;
 }
-
-#home {background-color: pink;}
-#forecast {background-color: green;}
-#sun-moon {background-color: orange;}
-#sun-div {background-color: yellow}
-#star-map {background-color: aqua;}
 
 /*******************/
 /** HEADER STYLES **/
-
 header {
-  background-color: deepskyblue;
   padding: 10px;
   margin: 0;
 }
 
-.search {
-  background-color: mediumblue;
-  margin: 0;
-  padding: 5px;
+
+#location-name,
+h2 {
+  color: var(--color-highlight);
 }
 
-/*****************************/
-/** WEATHER FORECAST STYLES **/
+#location-name {
+  font-size: 19px;
+}
+
+.search {
+  justify-self: flex-end;
+}
+
+.search input {
+  border: 3px solid white;
+  background-color: #bbb;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+#search-bar{
+  display: inline-block;
+}
+
+input:focus {
+  outline-color: rgba(2, 5, 43, 0.4);
+}
+
+#search-button {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+/************************/
+/** GENERAL TAB STYLES **/
+.general-wrapper {
+  color: white;
+  margin-bottom: 30px;
+  border: 3px solid var(--color-highlight);
+  border-radius: 10px;
+  background: rgba(2, 5, 43, 0.4);
+}
+
+#welcome {
+  background: rgba(2, 5, 43, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 19.5px;
+  height: 90%;
+}
+
+#welcome p:first-child {
+  margin-top: 0;
+}
+
+#welcome p:last-child {
+  margin-bottom: 0;
+}
+
+.blur {
+  position: absolute;
+  bottom: 25px;
+  right: 162px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
 
 /***********************/
 /** SUN & MOON STYLES **/
-
-#sun-wrapper,
-#moon-wrapper,
-#moon-phase-wrapper,
-#weather-wrapper,
-#visibility-wrapper {
-  margin: 10px 0;
-  background-color: yellow;
-}
-
 #sun-wrapper,
 #moon-wrapper,
 #weather-wrapper {
@@ -122,10 +225,79 @@ header {
 #moonset-title,
 #night-title {
   padding-top: 10px;
+  color: var(--color-highlight);
+}
+
+#sunrise-time,
+#moonrise-time,
+#evening-time,
+#sunset-time,
+#moonset-time,
+#night-time {
+  font-size: 18px;
+}
+
+/***********************/
+/** VISIBILITY STYLES **/
+#visibility-title {
+  padding: 10px 0 5px;
+}
+
+#visibility-label {
+  padding: 5px 0 10px;
+  color: var(--color-highlight);
+}
+
+#visibility-desc {
+  padding: 3px 0;
+}
+
+/***********************/
+/** MOON PHASE STYLES **/
+#moon-phase-title {
+  padding: 10px 0 5px;
+}
+
+#moon-phase-label {
+  padding: 10px 0;
+  font-size: 20px;
+  color: var(--color-highlight);
+}
+
+#moon-phase-icon {
+  height: 70px;
 }
 
 /*********************/
 /** STAR MAP STYLES **/
+#star-map {
+  border-radius: 10px;
+  background: rgba(2, 5, 43, 0.4);
+}
+
+iframe {
+  width: 99%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #333;
+  border-radius: 10px;
+}
+
+#map-header {
+  margin-bottom: 20px;
+}
+
+/*******************/
+/** FOOTER STYLES **/
+footer a {
+  color: #777;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+=======
 #map {
   background-color: aqua;
 } 

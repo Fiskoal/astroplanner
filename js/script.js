@@ -1,6 +1,3 @@
-// ! for JavaScript to work, add dashes to the class names on lines 11 & 17
-
-
 function openPage(pageName, element, color) {
 //? onclick = "openPage('forecast', this, 'green')
 
