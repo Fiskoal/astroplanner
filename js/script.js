@@ -56,6 +56,7 @@ $("#search-bar").on("click", function (e) {
   if (previousSearches.length > 0){
     // checks if the localStorage array length is greater than 0 (not an empty array)
     $(".previousSearches").attr("id", "previousSearches");
+    $("#previousSearches").empty();
     // adds id to the empty div in the html, to give it css properties and apply the rest of the javascript changes.
     isDropdownVis = true;
     for (i=0; i<previousSearches.length; i++) {
