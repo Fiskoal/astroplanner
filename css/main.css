@@ -64,7 +64,7 @@ body {
 
 .container-wrapper {
   margin: 0 auto;
-  height: 100vh;
+
 }
 
 h1,
@@ -155,6 +155,7 @@ h2 {
 .search {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  justify-self: flex-end;
 }
 
 .search input {
@@ -174,7 +175,7 @@ input:focus {
   outline-color: rgba(2, 5, 43, 0.4);
 }
 
-button {
+#search-button {
   border: 3px solid #ccc;
   border-radius: 5px;
   background-color: #ccc;
@@ -230,6 +231,7 @@ button {
 #moonset-title,
 #night-title {
   padding-top: 10px;
+  color: var(--color-highlight);
 }
 
 #sunrise-time,
@@ -249,6 +251,7 @@ button {
 
 #visibility-label {
   padding: 5px 0 10px;
+  color: var(--color-highlight);
 }
 
 #visibility-desc {
@@ -262,12 +265,14 @@ button {
 }
 
 #moon-phase-label {
-  padding: 5px 0 10px;
+  padding: 10px 0;
+  font-size: 20px;
+  color: var(--color-highlight);
 }
 
 #moon-phase-icon {
-  height: 60px;
-  padding: 3px 0;
+  height: 80px;
+  padding: 20px 0;
 }
 
 /*********************/
