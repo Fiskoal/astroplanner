@@ -85,7 +85,7 @@ $("#search-button").on("click", function () {
                 console.log("====================");
                 console.log("data is: ");
                 console.log(data3);
-                console.log(data3.days[0].moonphase)
+                console.log(data3.days[0].moonphase);
                 console.log("====================");
                 //// links javascript to API data
                 //let sunriseTime = data.sunrise;
