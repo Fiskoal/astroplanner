@@ -1,3 +1,6 @@
+//=================================================
+//*creating content tabs for mobile layout
+
 function openPage(pageName, element, color) {
 //? onclick = "openPage('forecast', this, 'green')
 
@@ -27,7 +30,7 @@ if (window.innerWidth <= 750) {
 }
 
 //=================================================
-//previous searches
+//*previous searches
 
 $("#search-button").on("click", function() {
   let searchValue = $("#search-bar").val().trim();
