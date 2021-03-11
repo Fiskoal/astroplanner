@@ -297,7 +297,6 @@ footer a {
   font-size: 12px;
 }
 
-=======
 #map {
   background-color: aqua;
 } 
@@ -313,6 +312,7 @@ footer a {
 }
 
 #previousSearches p {
+  color: black;
   margin: 0;
   padding-top: 5px;
   padding-bottom: 5px;
