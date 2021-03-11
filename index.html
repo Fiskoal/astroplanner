@@ -61,20 +61,20 @@
         <i id="evening-icon" class="small-icon fad fa-clouds small-icon"></i>
         <h5 id="evening-title" class="time-header">Evening:</h5>
         <p id="evening-time">
-          7pm
+          7pm 
         </p>
         <!-- night -->
         <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon"></i>
         <h5 id="night-title" class="time-header">Night:</h5>
         <p id="night-time">
-          11p
+          11pm
         </p>
       </div> <!-- end #weather-wrapper-->
       <div id="visibility-wrapper">
         <!-- visibility phase -->
-        <h4 id="visibility-title">Visibility:</h4>
+        <h4 id="visibility-title">Visibility:<span id="visibility-status"></span></h4>
         <p id="visibility-label">Poor</p>
-        <p id="visibility-desc">Cloudy with chance of rain</p>
+        <p id="visibility-desc">Cloud-Status:<span id ="cloud-status">:</span></p>
       </div><!-- end #visibility-wrapper-->
 
     </div> <!-- end #forecast tab-->
@@ -88,11 +88,11 @@
         <!-- sunrise -->
         <i id="sunrise-icon" class="fad fa-sunrise small-icon"></i>
         <h5 id="sunrise-title" class="time-header">Sunrise:</h5>
-        <p id="sunrise-time">06:48</p>
+        <p id="sunrise-time"><span id ="rise"></span></p>
         <!-- sunset -->
         <i id="sunset-icon" class="fad fa-sunset small-icon"></i>
         <h5 id="sunset-title" class="time-header">Sunset:</h5>
-        <p id="sunset-time">17:48</p>
+        <p id="sunset-time"><span id ="set"></span></p>
       </div><!-- end #sun-wrapper-->
 
       <div id="moon-wrapper">
@@ -129,10 +129,11 @@
           </ul>
     </div>
   </div>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/skymap.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/Weather.js"></script>
 </body>
 
 </html>
