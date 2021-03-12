@@ -18,7 +18,7 @@ A user-friendly, open source web application to plan your nights of star-gazing.
 ### :writing_hand: Concept: <a name="concept"></a>
 A user-friendly web application to plan your nights of star gazing. Whenever you want to go stargazing you can check AstroPlanner to decide if right now is a good time to go out and see the stars! 
 
-### Technologies Used:  <a name="tech"></a>
+### :bulb: Technologies Used:  <a name="tech"></a>
 * Languages:
   * HTML
   * CSS
@@ -40,7 +40,7 @@ A user-friendly web application to plan your nights of star gazing. Whenever you
 https://fiskoal.github.io/astroplanner/
 ![screenshots]()
 
-#### Mobile Layout:
+#### :iphone: Mobile Layout:
 <table>
   <tr>
     <td>Home Tab</td><td>Forecast Tab</td><td>Sun & Moon Tab</td><td>Star Map Tab</td>
@@ -50,7 +50,7 @@ https://fiskoal.github.io/astroplanner/
   </tr>
  </table>
 
-#### Desktop Layout:
+#### :computer: Desktop Layout:
 <img src="assets/desktop-screen.png">
 
 ### :clap: Credits  <a name="credits"></a>
