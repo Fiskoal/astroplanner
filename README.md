@@ -38,7 +38,6 @@ A user-friendly web application to plan your nights of star gazing. Whenever you
 ### :milky_way: Deployed Application:  <a name="app"></a>
 
 https://fiskoal.github.io/astroplanner/
-![screenshots]()
 
 #### :iphone: Mobile Layout:
 <table>
