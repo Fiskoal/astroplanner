@@ -56,13 +56,13 @@ header {
   justify-content: start; 
 }
 
-#weather-icon  {
-  grid-column: 1 / 2;
+#weather-title {
+  grid-column: 1 /2;
   grid-row: 2 / 3;
 }
 
-#weather-title {
-  grid-column: 1 /2;
+#weather-icon  {
+  grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
@@ -71,12 +71,12 @@ header {
   grid-row: 4 / 5;
 }
 
-#evening-icon {
+#evening-title {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
-#evening-title {
+#evening-icon {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
@@ -86,21 +86,20 @@ header {
   grid-row: 4 / 5;
 }
 
-#night-icon {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
 #night-title {
   grid-column: 3 / 4;
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
 } 
+
+#night-icon {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
 
 #night-time {
   grid-column: 3 / 4;
   grid-row: 4 / 5;
 }
-
 
 /** SECTION **/
 #sun-title,
@@ -117,14 +116,15 @@ header {
 }
 
 /** #-RISE **/
-#sunrise-icon,
-#moonrise-icon {
+
+#sunrise-title,
+#moonrise-title {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
-#sunrise-title,
-#moonrise-title {
+#sunrise-icon,
+#moonrise-icon {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
@@ -136,14 +136,15 @@ header {
 }
 
 /** #-SET **/
-#sunset-icon,
-#moonset-icon {
+
+#sunset-title,
+#moonset-title {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
 }
 
-#sunset-title,
-#moonset-title {
+#sunset-icon,
+#moonset-icon {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
 }

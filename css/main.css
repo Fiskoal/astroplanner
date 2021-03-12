@@ -19,8 +19,8 @@
 }
 
 .theme-cloud {
-  --fa-primary-color: plum;
-  --fa-secondary-color: plum;
+  --fa-primary-color: forestgreen;
+  --fa-secondary-color: forestgreen;
 }
 
 /* .theme-rain {
@@ -248,6 +248,12 @@ input:focus {
 #weather-header,
 #sky-header {
   padding: 10px 0 5px;
+}
+
+#weather-icon,
+#evening-icon,
+#night-icon {
+  padding-top: 10px;
 }
 
 /*******************************/

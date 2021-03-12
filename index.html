@@ -85,20 +85,28 @@
         <div id="weather-wrapper" class="general-wrapper">
           <!-- weather -->
           <h3 id="weather-header">Weather:</h3>
-          <i id="weather-icon" class="small-icon fad fa-clouds large-icon theme-cloud"></i>
+          <div id="weather-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
           <h4 id="weather-title" class="time-header title">Current:</h4>
-          <p id="weather-desc">rain/sun</p>
+          <p id="weather-desc">
+
+          </p>
           <!-- evening -->
-          <i id="evening-icon" class="small-icon fad fa-clouds small-icon theme-cloud"></i>
+          <div id="evening-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
           <h4 id="evening-title" class="time-header title">In 3 hours:</h4> <!-- evening became soon -->
           <p id="evening-time"> 
-            rain
+            
           </p>
           <!-- night -->
-          <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon theme-cloud"></i>
+          <div id="night-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
           <h4 id="night-title" class="time-header title">In 6 hours:</h4> <!-- night became later -->
           <p id="night-time">
-            sun
+            
           </p>
         </div> <!-- end #weather-wrapper-->
         <div id="visibility-wrapper" class="general-wrapper">
@@ -106,12 +114,12 @@
           <h3 id="sky-header">Sky:</h3>
           <!-- sky visibility -->
           <h3 id="visibility-title" class="title">Visibility:<span id ="visibility-status"></span></h3>
-          <h4 id="visibility-number"># miles</h4>
+          <h4 id="visibility-number">?</h4>
           <p id="visibility-desc">Poor</p>
           <!-- sky visibility -->
           <h3 id="cloudiness-title" class="title">Cloudiness:</h3>
-          <h4 id="cloudiness-number">85%</h4>
-          <p id="cloudiness-desc">scattered clouds</p>
+          <h4 id="cloudiness-number">?</h4>
+          <p id="cloudiness-desc"></p>
         </div><!-- end #visibility-wrapper-->
       </div> <!-- end #forecast tab-->
 
@@ -132,7 +140,7 @@
         <div id="moon-wrapper" class="general-wrapper">
           <!-- moon info -->
           <h3 id="moon-title">Moon:</h3>
-          <i id="moon-img" class="fad fa-moon-stars large-icon theme-moon"></i>
+          <i id="moon-img" class="fad fa-moon large-icon theme-moon"></i>
           <!-- moonrise -->
           <i id="moonrise-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
           <h4 id="moonrise-title" class="title">Moonrise:</h4>
