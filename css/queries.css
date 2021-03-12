@@ -25,6 +25,14 @@
 /** Tablets **/
 @media screen and (min-width: 700px) {
 
+  #background-shader {
+  /* second color in linear gradient is in #RGBA format*/
+    background-image: linear-gradient(#222, #4444);
+    height: 97vh;
+    width: 1050px;
+    margin: 0 auto;
+  } 
+
   .container-wrapper {
     max-width: 1000px;
     display: grid;
