@@ -57,18 +57,31 @@ body {
 
 }
 
-h1,
 h2,
+h1,
 h3,
-h4 {
+h4,
+h5 {
   text-transform: uppercase;  
   font-family: 'Montserrat Alternates', sans-serif;
   margin: 0px;
+}
+
+h2,
+h1,
+h3,
+h4 {
   display: inline-block;
 }
 
 h1 {
-  font-size: 32px;
+  margin-bottom: 10px;
+  font-size: 32px; 
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
   padding: 2px 0 8px;
 }
 
@@ -76,9 +89,8 @@ span {
   color: #fff;
 }
 
-h2 {
-  padding-left: 15px;
-  margin-bottom: 10px;
+h5 {
+  font-size: 22px;
 }
 
 .large-icon,
@@ -92,6 +104,11 @@ h2 {
   font-size: 30px;
   margin: 0 auto;
   padding-top: 10%;
+}
+
+.intro-emphasis {
+  font-weight: bold;
+  font-size: 22px; 
 }
 
 /*********************/
@@ -133,7 +150,7 @@ header {
 
 
 #location-name,
-h2 {
+span {
   color: var(--color-highlight);
 }
 
@@ -267,22 +284,29 @@ input:focus {
 
 /*********************/
 /** STAR MAP STYLES **/
+
 #star-map {
-  border-radius: 10px;
-  background: rgba(2, 5, 43, 0.4);
+  margin: 60px 0 0 0;
+  padding: 2px;
 }
 
 iframe {
-  width: 99%;
-  height: 80%;
   margin: 0;
   padding: 0;
+  width: 99%;
+  height: 88%;
   border: 3px solid #333;
   border-radius: 10px;
 }
 
 #map-header {
   margin-bottom: 20px;
+}
+#map-div {
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(2, 5, 43, 0.4);
+
 }
 
 /*******************/
@@ -293,10 +317,6 @@ footer a {
   text-align: center;
   font-size: 12px;
 }
-
-#map {
-  background-color: aqua;
-} 
 
 /****************************/
 /* Previous Searches */

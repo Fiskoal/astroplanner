@@ -12,6 +12,14 @@
   #star-map {
     display: none;
   }
+
+  #star-map {
+    min-height: 300px;
+
+  }
+  #map-div {
+    height: 60vh;
+  }
 }
 
 /** Tablets **/
@@ -21,7 +29,7 @@
     max-width: 1000px;
     display: grid;
     grid-template-columns: 42% 58%;
-    grid-template-rows: 70px auto auto auto;
+    grid-template-rows: 100px repeat(6, auto);
   }
 
   header {
@@ -29,7 +37,7 @@
     grid-row: 1 / 2;
   }
 
-  h1 {
+  h2 {
     font-size: 25px;
   }
 
@@ -56,28 +64,31 @@
 
   #home {
     grid-column: 2 / 3;
-    grid-row: 2 / 3; 
+    grid-row: 2 / 4; 
   }
 
   #forecast {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 5;
   }
 
   #sun-moon {
     grid-column: 1 / 2;
-    grid-row: 3 / 5;
+    grid-row: 5 / 7;
   }
 
   #star-map {
     grid-column: 2 / 3;
-    grid-row: 3 / 6;
+    grid-row: 4 / 7;
   }
 
-  #sun-wrapper,
+  #sun-wrapper {
+    margin: 0 0 5px;
+  }
+
   #moon-wrapper,
   #weather-wrapper {
-    margin: 10px 0 20px;
+    margin: 10px 0 5px;
   }
 
   #visibility-wrapper {
@@ -93,11 +104,15 @@
   }
 
   #sun-moon {
-    padding: 5px 12px;
+    padding: 0 12px 5px;
   }
 
   #star-map {
     margin: 10px 0 0 10px; 
+  }
+  
+  #map-div {
+    height: 50vh;
   }
 }
 

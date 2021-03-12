@@ -15,7 +15,7 @@
   <script src="https://kit.fontawesome.com/83fba97459.js" crossorigin="anonymous"></script>
   <!-- Pure.css framework -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
-    integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+    integrity="sha384-LTIDeidl25h1dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
   <!-- moment.js -->
   <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   <!-- custom styles -->
@@ -51,9 +51,9 @@
   <div id="background-shader">
     <div class="container-wrapper">
       <header>
-        <h1 id="location-header">Location:</h1><br>
+        <h1 id="app-name">Astro<span>Planner</span></h1>
+        <h2 id="location-header">Location:</h2><br>
         <h4 id="location-name">TBD</h4>
-        <h2>Astro<span>Planner</span></h2>
         <section class="search">
           <input type="text" id="search-bar" placeholder="Enter a city name...">
           <button id="search-button">🔍</button>
@@ -73,7 +73,7 @@
       <div id="home" class="tab-content">
 
         <div id="welcome">
-          <p><strong>Welcome to AstroPlanner!</strong></p>
+          <p class="intro-emphasis">Welcome to Astro<span>Planner</span>!</p>
           <p>Here you can find out when the sun & moon rise and set at your location, as well as how clear the night sky
             is above you.</p>
           <p>AstroPlanner also generates a star map for you so that you have everything you need to go star-gazing!</p>
@@ -152,8 +152,10 @@
       </div> <!-- end #sun-moon-section-->
 
       <div id="star-map" class="tab-content">
-        <h3 id="map-header">Star map for:</h3>
-        <iframe id="map-img"></iframe>
+        <div id="map-div">
+          <h5 id="map-header">Star map for:</h5>
+          <iframe id="map-img"></iframe>
+        </div>
       </div>
     </div>
   </div>
