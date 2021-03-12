@@ -230,9 +230,12 @@ input:focus {
 
 /*******************************/
 /** CLOUD & VISIBILITY STYLES **/
-#visibility-title,
-#cloudiness-title {
+#visibility-title {
   padding: 10px 0 5px;
+}
+
+#cloudiness-title {
+  padding: 10px 0 15px;
 }
 
 #visibility-label {
@@ -242,8 +245,8 @@ input:focus {
 #visibility-desc,
 #cloudiness-desc {
   padding: 3px 0;
+  margin: 3px 0;
 }
-
 
 /***********************/
 /** SUN & MOON STYLES **/
