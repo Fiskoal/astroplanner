@@ -78,7 +78,6 @@ let getWeatherApi = function (pLace) {
                 })
             }
         })
-
 }
 
 Locbutton.addEventListener('click', formSubmitHandler);

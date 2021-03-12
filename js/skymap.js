@@ -35,6 +35,7 @@ $("#search-button").on("click", function () {
 
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
+        console.log($("#map-img").attr())
 
         // ACCESS IPGEOLOCATION.IO API DATA
         //console.log(data.results[0].geometry.lng);
