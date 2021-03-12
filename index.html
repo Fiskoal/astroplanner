@@ -16,6 +16,9 @@
   <!-- Pure.css framework -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
     integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+
+    <!-- for Moment -->
+    <link rel="stylesheet" href="./assets/css/style.css" /> <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   <!-- custom styles -->
   <link rel="stylesheet" href="css/css-grid.css">
   <link rel="stylesheet" href="css/main.css">
@@ -76,9 +79,9 @@
         </div> <!-- end #weather-wrapper-->
         <div id="visibility-wrapper" class="general-wrapper">
           <!-- visibility phase -->
-          <h3 id="visibility-title">Visibility:</h3>
-          <h4 id="visibility-label">Poor</h4>
-          <p id="visibility-desc">Cloudy with chance of rain</p>
+          <h3 id="visibility-title">Visibility:<span id ="visibility-status"></span></h3>
+          <h4 id="visibility-label"></h4>
+          <p id="visibility-desc"></p>
         </div><!-- end #visibility-wrapper-->
       </div> <!-- end #forecast tab-->
 
@@ -129,7 +132,7 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="js/skymap.js"></script>
+  <!-- <script src="js/skymap.js"></script> -->
   <script src="js/script.js"></script>
   <script src="js/Weather.js"></script>
 </body>
