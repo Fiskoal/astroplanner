@@ -4,6 +4,8 @@ let Visbi = document.getElementById("visibility-status");
 let Sunrise = document.getElementById("sunrise-time");
 let Sunset = document.getElementById("sunset-time");
 let CloudStatus = document.getElementById("visibility-desc");
+let H3ours = document.getElementById("soon");
+let H6ours = document.getElementById("later")
 let Longi;
 let Lati;
 
@@ -30,81 +32,47 @@ let getWeatherApi = function (pLace) {
                     //visibility
                     console.log(data.list[0].visibility);
                     para = data.list[0].visibility;
-                    console.log(para);
+                    //console.log(para);
                     let visityInMile = para * 0.000621371;
-                    console.log(visityInMile);
+                    //console.log(visityInMile);
                     Visbi.textContent = " " + visityInMile + " mi";
 
                     // surise 
-                   //  calling moment function for converting UTC time to current time zone
+                    //  calling moment function for converting UTC time to current time zone
                     let SunR = moment.unix(data.city.sunrise).format("hh:mm:ss a");
                     Sunrise.textContent = SunR;
-                    
+
 
                     //  Sunset 
                     let SunS = moment.unix(data.city.sunset).format("hh:mm:ss a");
-                    console.log(SunS);
+                    //console.log(SunS);
                     Sunset.textContent = SunS;
-                    
+
                     // Getting Latitude & Longitude 
                     Longi = data.city.coord.lon;
                     Lati = data.city.coord.lat;
-                    console.log(Longi);
-                    console.log(Lati);
+                    // console.log(Longi);
+                    //console.log(Lati);
 
-                   // New API 
-                     let apiURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + Longi + '&lon=' + Lati + '&appid=3ee6de7b8fdeda946857956b40bd39af';
-                     console.log(apiURL);
-                     fetch(apiURL)
+                    // New API 
+                    let apiURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + Longi + '&lon=' + Lati + '&appid=3ee6de7b8fdeda946857956b40bd39af';
+                    console.log(apiURL);
+                    fetch(apiURL)
                         .then(function (response) {
-                         return response.json();
-                            
+                            return response.json();
+
                         })
-                         .then(function (data) {
+                        .then(function (data) {
                             console.log(data)
-                             //cloud status currently
-                            //console.log(data.current.weather[0].description);
-                            CloudStatus.textContent=data.current.weather[0].description;
-
-                             // Cloud status after 3 hours
-                             //console.log(data.hourly[2].weather);
-                             console.log(data.hourly[2].weather[0].description);
-
-                             // Cloud status after 3 hours
-                             console.log(data.hourly[7].weather[0].description);
-
-
-
-
+                            //cloud status currently
+                            CloudStatus.textContent = data.current.weather[0].description;
+                            // Cloud status after 3 hours
+                            H3ours.textContent = data.hourly[2].weather[0].description;
+                            // Cloud status after 6 hours
+                            console.log(data.hourly[5].weather[0].description);
+                            H6ours.textContent = data.hourly[5].weather[0].description;
 
                         });
-                       
-                            
-                           
-                           
-                           
-                           // console.log(data.daily[2].weather[0].description);
-
-        
-
-
-
-
-
-
-
-                       
-
-
-
-
-
-
-
-
-
-
-
 
 
                 })
