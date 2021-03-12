@@ -83,7 +83,7 @@ let getWeatherApi = function (pLace) {
                            
                            
                            
-                           // console.log(data.daily[2].weather[0].description);
+                          
 
         
 
