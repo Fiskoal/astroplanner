@@ -19,11 +19,11 @@ $("#search-button").on("click", function () {
       }
       response.json().then(function (data) {
         // console logs
-        console.log("====================");
-        console.log("geocode api data");
-        console.log(data);
-        console.log(data.results[0].formatted + ": " + data.results[0].bounds.northeast.lat + ", " + data.results[0].bounds.northeast.lng);
-        console.log("====================");
+        // console.log("====================");
+        // console.log("geocode api data");
+        // console.log(data);
+        // console.log(data.results[0].formatted + ": " + data.results[0].bounds.northeast.lat + ", " + data.results[0].bounds.northeast.lng);
+        // console.log("====================");
         // console logs
 
         $("#location-name").text(data.results[0].formatted);
@@ -83,89 +83,96 @@ $("#search-button").on("click", function () {
                 let moonPhaseValue = data3.currentConditions.moonphase;
                 // links javascript to HTML elements
                 let moonPhaseIconDisplay = document.querySelector('#moon-phase-icon-location');
-                let moonPhaseTextDisplay = document.querySelector('#moon-phase-text');
+                let moonPhaseTextDisplay = document.querySelector('#moon-phase-label');
                 // updates html text
                 //moonPhaseDisplay.innerHTML = '<img src="icon/_____.png" alt="moon phase" id="moon-phase-icon">';
                 
+                let phaseIcon = "icon";
+                let phaseText = "text";
+
                 console.log("====================");
+                console.log("dummy values are: ");
+                console.log(phaseIcon, phaseText);
                 console.log("moon phase value is: ");
-                //console.log(moonPhaseValue);
+                console.log(moonPhaseValue);
 
                 // determines which icon and title to display
                 whichPhase(moonPhaseValue);
                 function whichPhase() {
                   if ((moonPhaseValue === 0) || (moonPhaseValue === 1)) {
                     console.log('new-moon');
-                    let phaseIcon = "new";
-                    let phaseText = "waxing crescent";
+                    phaseIcon = "new";
+                    phaseText = "waxing crescent";
 
                   } else if (moonPhaseValue <= 0.125) {
                     console.log('<= 0.125');
-                    let phaseIcon = "m125";
-                    let phaseText = "waxing crescent";
+                    phaseIcon = "m125";
+                    phaseText = "waxing crescent";
 
                   } else if (moonPhaseValue <= 0.25) {
                     console.log('<= 0.250');
-                    let phaseIcon = "m250";
-                    let phaseText = "first quarter";
+                    phaseIcon = "m250";
+                    phaseText = "first quarter";
 
                   } else if (moonPhaseValue <= 0.375) {
                     console.log('<= 0.375');
-                    let phaseIcon = "m375";
-                    let phaseText = "waxing gibbous";
+                    phaseIcon = "m375";
+                    phaseText = "waxing gibbous";
 
                   } else if (moonPhaseValue <= 0.499) {
                     console.log('<= 0.499');
-                    let phaseIcon = "m499";
-                    let phaseText = "waxing gibbous";
+                    phaseIcon = "m499";
+                    phaseText = "waxing gibbous";
 
                   } else if (moonPhaseValue === 0.500) {
                     console.log('full-moon');
-                    let phaseIcon = "mfull";
-                    let phaseText = "waxing gibbous";
+                    phaseIcon = "full";
+                    phaseText = "waxing gibbous";
 
                   } else if (moonPhaseValue <= 0.625) {
                     console.log('<= 0.625');
-                    let phaseIcon = "m625";
-                    let phaseText = "waxing gibbous";
+                    phaseIcon = "m625";
+                    phaseText = "waxing gibbous";
 
                   } else if (moonPhaseValue <= 0.75) {
                     console.log('<= 0.750');
-                    let phaseIcon = "m750";
-                    let phaseText = "last quarter";
+                    phaseIcon = "m750";
+                    phaseText = "last quarter";
 
                   } else if (moonPhaseValue <= 0.875) {
                     console.log('<= 0.875');
-                    let phaseIcon = "m875";
-                    let phaseText = "waning crescent";
+                    phaseIcon = "m875";
+                    phaseText = "waning crescent";
 
                   } else if (moonPhaseValue <= 0.999) {
                     console.log('<= 0.999');
-                    let phaseIcon = "m999";
-                    let phaseText = "waning crescent";
+                    phaseIcon = "m999";
+                    phaseText = "waning crescent";
 
                   }  else {
                     console.log('whoops!');
                   }
 
                   console.log("====================");
+                  console.log("====================");
                   console.log("phase-icon is: ");
                   console.log(phaseIcon);
+                  console.log("====================");
+                  console.log("====================");
                   console.log("phase-text is: ");
                   console.log(phaseText);
+
+                  console.log(moonPhaseTextDisplay)
+
+                  moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
+                  moonPhaseTextDisplay.innerHTML = `${phaseText}`;
+                // displays current phase icon and text in HTML
+                //function loadPhase(){
                 };
 
-                moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
-                moonPhaseTextDisplay.textContent = phaseText;
-                // displays current phase icon and text in HTML
-                function loadPhase(){
+
                   
-                }
-
-
-
-                
-
+                })
 
 
 
@@ -176,4 +183,4 @@ $("#search-button").on("click", function () {
 
       });
     });
-});
+;
