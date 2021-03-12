@@ -82,7 +82,8 @@ $("#search-button").on("click", function () {
                 // links javascript to API data
                 let moonPhaseValue = data3.currentConditions.moonphase;
                 // links javascript to HTML elements
-                let moonPhaseDisplay = document.querySelector('_____');
+                let moonPhaseIconDisplay = document.querySelector('#moon-phase-icon-location');
+                let moonPhaseTextDisplay = document.querySelector('#moon-phase-text');
                 // updates html text
                 //moonPhaseDisplay.innerHTML = '<img src="icon/_____.png" alt="moon phase" id="moon-phase-icon">';
                 
@@ -146,13 +147,28 @@ $("#search-button").on("click", function () {
                   }  else {
                     console.log('whoops!');
                   }
+
+                  console.log("====================");
+                  console.log("phase-icon is: ");
+                  console.log(phaseIcon);
+                  console.log("phase-text is: ");
+                  console.log(phaseText);
                 };
 
+                moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
+                moonPhaseTextDisplay.textContent = phaseText;
                 // displays current phase icon and text in HTML
                 function loadPhase(){
-                  document.getElementById('moon-phase-icon').src = `icon/${phaseIcon}.png`;
-                  document.getElementById('moon-phase-title').textContent = `${phaseText}`;
+                  
                 }
+
+
+
+                
+
+
+
+
                 
               });
 
