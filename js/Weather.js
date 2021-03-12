@@ -1,6 +1,6 @@
 let Locatio = document.getElementById("search-bar");
 let Locbutton = document.getElementById("search-button");
-let Visbi = document.getElementById("visibility-status");
+let Visbi = document.getElementById("visibility-number");
 let Sunrise = document.getElementById("sunrise-time");
 let Sunset = document.getElementById("sunset-time");
 let CloudStatus = document.getElementById("visibility-desc");
@@ -32,9 +32,9 @@ let getWeatherApi = function (pLace) {
                     para = data.list[0].visibility;
                     console.log(para);
                     let visity = para * 0.000621371;
-                    let visityInMile = visity.toFixed(2);
+                    let visityInMile = visity.toFixed(1);
                     console.log(visityInMile);
-                    Visbi.textContent = " " + visityInMile + " mi";
+                    Visbi.textContent = " " + visityInMile + " miles";
 
                     // sunrise 
                     //  calling moment function for converting UTC time to current time zone
@@ -71,49 +71,13 @@ let getWeatherApi = function (pLace) {
                             //console.log(data.hourly[2].weather);
                             console.log(data.hourly[2].weather[0].description);
 
-                            // Cloud status after 3 hours
+                            // Cloud status after 6 hours
                             console.log(data.hourly[7].weather[0].description);
 
-
-
-
-
                         });
-
-
-
-
-
                     // console.log(data.daily[2].weather[0].description);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 })
             }
         })
-
 }
-
 Locbutton.addEventListener('click', formSubmitHandler);
-
-
