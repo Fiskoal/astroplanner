@@ -25,9 +25,9 @@ A user-friendly web application to plan your nights of star gazing. Whenever you
   * JS
   * jQuery
 * APIs:
-  * SkyMap
-  * IPGeolocation.io
-  * VisualCrossing.com  
+  * [SkyMap](http://www.wikisky.org/api?locale=EN)
+  * [IPGeolocation.io](https://ipgeolocation.io/)
+  * [VisualCrossing.com](https://www.visualcrossing.com/)
 
 ### :mage: Features:  <a name="features"></a>
 * Unique mobile and desktop layouts
