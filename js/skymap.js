@@ -35,7 +35,7 @@ $("#search-button").on("click", function () {
 
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
-        console.log($("#map-img").attr())
+        //console.log($("#map-img").attr())
 
         // ACCESS IPGEOLOCATION.IO API DATA
         //console.log(data.results[0].geometry.lng);
@@ -79,7 +79,7 @@ $("#search-button").on("click", function () {
                 return response.json();
               })
               .then(data3 => {
-                // console.log(data3);
+                console.log(data3);
                 // links javascript to API data
                 let moonPhaseValue = data3.currentConditions.moonphase;
                 // links javascript to HTML elements

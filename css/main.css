@@ -258,8 +258,7 @@ input:focus {
 
 #moon-phase-label {
   padding: 10px 0;
-  font-size: 20px;
-  color: var(--color-highlight);
+  font-size: 16px;
 }
 
 #moon-phase-icon {
