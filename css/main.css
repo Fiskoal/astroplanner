@@ -44,16 +44,6 @@ body {
   background: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1387&q=80") center no-repeat #333;
   background-size: cover;
   height: 90vh;
-
-  /** Background Option 2: **/
-  /* background: url("https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80") center no-repeat #333;
-  background-size: cover;
-  height: 100vh; */
-
-  /** Background Option 3: **/
-  /* background: url("https://images.unsplash.com/photo-1505609784087-749ad048763e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80") center no-repeat #333;
-  background-size: cover;
-  height: 100vh;  */
 }
 
 #background-shader {

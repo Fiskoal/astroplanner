@@ -1,3 +1,6 @@
+//=================================================
+//*creating content tabs for mobile layout
+
 function openPage(pageName, element, color) {
 //? onclick = "openPage('forecast', this, 'green')
 
