@@ -4,6 +4,8 @@ let Visbi = document.getElementById("visibility-status");
 let Sunrise = document.getElementById("sunrise-time");
 let Sunset = document.getElementById("sunset-time");
 let CloudStatus = document.getElementById("visibility-desc");
+let Hour3 = document.getElementById("soon");
+let Hour6 = document.getElementById("later");
 let Longi;
 let Lati;
 
@@ -69,48 +71,18 @@ let getWeatherApi = function (pLace) {
                             // Cloud status after 3 hours
                             //console.log(data.hourly[2].weather);
                             console.log(data.hourly[2].weather[0].description);
+                            Hour3.textContent = data.hourly[2].weather[0].description;
 
                             // Cloud status after 3 hours
                             console.log(data.hourly[7].weather[0].description);
-
-
-
+                            Hour6.textContent = data.hourly[7].weather[0].description;
 
 
                         });
 
-
-
-
-
-                    // console.log(data.daily[2].weather[0].description);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 })
             }
         })
-
 }
 
 Locbutton.addEventListener('click', formSubmitHandler);
