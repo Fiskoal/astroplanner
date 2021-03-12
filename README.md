@@ -1,4 +1,4 @@
-# AstroPlanner
+# :stars: AstroPlanner
 A user-friendly, open source web application to plan your nights of star-gazing.
 
 ## :book: Table of Contents
@@ -9,13 +9,13 @@ A user-friendly, open source web application to plan your nights of star-gazing.
 5. [Deployed Application](#app)
 6. [Credits](#credits)
 
-### Motivation: <a name="motivation"></a>
+### :star2: Motivation: <a name="motivation"></a>
 #### User Story:
 **AS A** curious person/ citizen of the world <br>
 **I WANT** to see space maps and weather <br>
 **SO THAT** I can make plans for stargazing 
 
-### Concept: <a name="concept"></a>
+### :writing_hand: Concept: <a name="concept"></a>
 A user-friendly web application to plan your nights of star gazing. Whenever you want to go stargazing you can check AstroPlanner to decide if right now is a good time to go out and see the stars! 
 
 ### Technologies Used:  <a name="tech"></a>
@@ -29,13 +29,13 @@ A user-friendly web application to plan your nights of star gazing. Whenever you
   * IPGeolocation.io
   * VisualCrossing.com  
 
-### Features:  <a name="features"></a>
+### :mage: Features:  <a name="features"></a>
 * Unique mobile and desktop layouts
 * Star Map to help you understand the skies above
 * Rising and Setting of the sun and moon, so you can plan lighting for photography or just to get the best view possible
 * Cities that you search are stored in localStorage for quick access.
 
-### Deployed Application:  <a name="app"></a>
+### :milky_way: Deployed Application:  <a name="app"></a>
 
 https://fiskoal.github.io/astroplanner/
 ![screenshots]()
@@ -53,8 +53,7 @@ https://fiskoal.github.io/astroplanner/
 #### Desktop Layout:
 <img src="assets/desktop-screen.png">
 
-### Credits  <a name="credits"></a>
-- Add these:
+### :clap: Credits  <a name="credits"></a>
 - [Background photo by Vincentiu Solomon](https://unsplash.com/photos/ln5drpv_ImI)
 - <a href="https://www.vecteezy.com/free-vector/moon">Moon Phase Icon Vectors by Vecteezy</a>
 
