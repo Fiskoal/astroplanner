@@ -83,26 +83,34 @@
       <div id="forecast" class="tab-content">
         <div id="weather-wrapper" class="general-wrapper">
           <!-- weather -->
-          <h3 id="weather-title">Weather:</h3>
-          <i id="weather-img" class="large-icon fad fa-clouds large-icon theme-cloud"></i>
+          <h3 id="weather-header">Weather:</h3>
+          <i id="weather-icon" class="small-icon fad fa-clouds large-icon theme-cloud"></i>
+          <h4 id="weather-title" class="time-header title">Current:</h4>
+          <p id="weather-desc">rain/sun</p>
           <!-- evening -->
           <i id="evening-icon" class="small-icon fad fa-clouds small-icon theme-cloud"></i>
-          <h4 id="evening-title" class="time-header">Soon:</h4> <!-- evening became soon -->
+          <h4 id="evening-title" class="time-header title">In 3 hours:</h4> <!-- evening became soon -->
           <p id="evening-time"> 
-            +3h
+            rain
           </p>
           <!-- night -->
           <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon theme-cloud"></i>
-          <h4 id="night-title" class="time-header">Later:</h4> <!-- night became later -->
+          <h4 id="night-title" class="time-header title">In 6 hours:</h4> <!-- night became later -->
           <p id="night-time">
-            +6h
+            sun
           </p>
         </div> <!-- end #weather-wrapper-->
         <div id="visibility-wrapper" class="general-wrapper">
           <!-- visibility phase -->
-          <h3 id="visibility-title">Visibility:<span id ="visibility-status"></span></h3>
-          <h4 id="visibility-label"></h4>
-          <p id="visibility-desc"></p>
+          <h3 id="sky-header">Sky:</h3>
+          <!-- sky visibility -->
+          <h3 id="visibility-title" class="title">Visibility:<span id ="visibility-status"></span></h3>
+          <p id="visibility-label"># miles</p>
+          <p id="visibility-desc">Poor</p>
+          <!-- sky visibility -->
+          <h3 id="cloudiness-title" class="title">Cloudiness:</h3>
+          <h4 id="cloudiness-number">%</h4>
+          <p id="cloudiness-desc">scattered clouds</p>
         </div><!-- end #visibility-wrapper-->
       </div> <!-- end #forecast tab-->
 
@@ -113,11 +121,11 @@
           <i id="sun-img" class="fad fa-sun large-icon theme-sun"></i>
           <!-- sunrise -->
           <i id="sunrise-icon" class="fad fa-sunrise small-icon theme-sun"></i>
-          <h4 id="sunrise-title" class="time-header">Sunrise:</h4>
+          <h4 id="sunrise-title" class="time-header title">Sunrise:</h4>
           <p id="sunrise-time">&nbsp;</p>
           <!-- sunset -->
           <i id="sunset-icon" class="fad fa-sunset small-icon theme-sun"></i>
-          <h4 id="sunset-title" class="time-header">Sunset:</h4>
+          <h4 id="sunset-title" class="time-header title">Sunset:</h4>
           <p id="sunset-time">&nbsp;</p>
         </div><!-- end #sun-wrapper-->
         <div id="moon-wrapper" class="general-wrapper">
@@ -126,16 +134,16 @@
           <i id="moon-img" class="fad fa-moon-stars large-icon theme-moon"></i>
           <!-- moonrise -->
           <i id="moonrise-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
-          <h4 id="moonrise-title">Moonrise:</h4>
+          <h4 id="moonrise-title" class="title">Moonrise:</h4>
           <p id="moonrise-time">&nbsp;</p>
           <!-- moonset -->
-          <i id="moonset-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
-          <h4 id="moonset-title">Moonset:</h4>
+          <i id="moonset-icon" class="fad fa-stars small-icon theme-moon"></i>
+          <h4 id="moonset-title" class="title">Moonset:</h4>
           <p id="moonset-time">&nbsp;</p>
         </div><!-- end #moon-wrapper-->
         <div id="moon-phase-wrapper" class="general-wrapper">
           <!-- moon phase -->
-          <h3 id="moon-phase-title">Moon Phase:</h3>
+          <h3 id="moon-phase-title" class="title">Moon Phase:</h3>
           <h4 id="moon-phase-label">&nbsp;</h4>
           <div id="moon-phase-icon-location">
             <img src="icon/null.png" alt="full-moon" id="moon-phase-icon">
