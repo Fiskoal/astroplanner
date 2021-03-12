@@ -14,7 +14,7 @@
   }
 
   #star-map {
-    min-height: 300px;
+    min-height: 250px;
 
   }
   #map-div {
@@ -120,7 +120,7 @@
   }
   
   #map-div {
-    height: 50vh;
+    height: 46vh;
   }
 }
 

@@ -1,5 +1,6 @@
 :root {
   --color-highlight: #bb92af;
+  --color-darklight: #442e49;
   --wrapper-border: #ccc;
   /*dark blue is: rgba(2, 5, 43, 0.4)*/
 }
@@ -176,13 +177,32 @@ span {
 }
 
 input:focus {
-  outline-color: rgba(2, 5, 43, 0.4);
+  outline-color: var(--color-darklight);
+  border: 3px solid var(--color-darklight);
 }
 
 #search-button {
   border: 3px solid #ccc;
   border-radius: 5px;
   background-color: #ccc;
+}
+
+#search-button:hover {
+  border: 3px solid var(--color-highlight);
+  background-color: var(--color-darklight);
+}
+
+#icon-glossary {
+  border-radius: 9px;
+  border: 3px solid var(--color-highlight);
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(70, 48, 75);
+  outline-color: rgb(70, 48, 75);
+}
+
+#icon-glossary:hover {
+  border: 3px solid #fff;
 }
 
 /************************/
