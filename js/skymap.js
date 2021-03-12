@@ -37,8 +37,8 @@ $("#search-button").on("click", function () {
 
 
         // ACCESS IPGEOLOCATION.IO API DATA
-          //console.log(data.results[0].geometry.lng);
-          //console.log(data.results[0].geometry.lat);
+        //console.log(data.results[0].geometry.lng);
+        //console.log(data.results[0].geometry.lat);
         let astroAPILink = `${apiAstro.base}/astronomy?apiKey=${apiAstro.key}&lat=${data.results[0].geometry.lat}&long=${data.results[0].geometry.lng}`;
 
         fetch(astroAPILink)
@@ -67,8 +67,8 @@ $("#search-button").on("click", function () {
             console.log('sunrise', sunriseTime);
 
             // ACCESS VISUALCROSSING.COM MOON PHASE API DATA
-              //console.log(data);
-              //console.log(data.results[0].geometry.lng);
+            //console.log(data);
+            //console.log(data.results[0].geometry.lng);
             let moonAPILink = `${apiMoon.base}?includeAstronomy=true&key=${apiMoon.key}&period=today&contentType=json&locations=${data.results[0].geometry.lat}%2C%20${data.results[0].geometry.lng}`;
             console.log(moonAPILink);
 
@@ -84,17 +84,8 @@ $("#search-button").on("click", function () {
                 // links javascript to HTML elements
                 let moonPhaseIconDisplay = document.querySelector('#moon-phase-icon-location');
                 let moonPhaseTextDisplay = document.querySelector('#moon-phase-label');
-                // updates html text
-                //moonPhaseDisplay.innerHTML = '<img src="icon/_____.png" alt="moon phase" id="moon-phase-icon">';
-                
                 let phaseIcon = "icon";
                 let phaseText = "text";
-
-                console.log("====================");
-                console.log("dummy values are: ");
-                console.log(phaseIcon, phaseText);
-                console.log("moon phase value is: ");
-                console.log(moonPhaseValue);
 
                 // determines which icon and title to display
                 whichPhase(moonPhaseValue);
@@ -149,38 +140,28 @@ $("#search-button").on("click", function () {
                     phaseIcon = "m999";
                     phaseText = "waning crescent";
 
-                  }  else {
-                    console.log('whoops!');
+                  } else {
+                    console.log('whoops! hello :)');
                   }
 
-                  console.log("====================");
                   console.log("====================");
                   console.log("phase-icon is: ");
                   console.log(phaseIcon);
                   console.log("====================");
-                  console.log("====================");
                   console.log("phase-text is: ");
                   console.log(phaseText);
 
-                  console.log(moonPhaseTextDisplay)
+                  console.log(moonPhaseTextDisplay);
 
                   moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
                   moonPhaseTextDisplay.innerHTML = `${phaseText}`;
-                // displays current phase icon and text in HTML
-                //function loadPhase(){
-                };
-
-
-                  
-                })
-
-
-
-                
+                  // displays current phase icon and text in HTML
+                  //function loadPhase(){
+                }
               });
 
           });
-
       });
-    });
-;
+    }
+    );
+});
