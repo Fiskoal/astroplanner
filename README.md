@@ -56,9 +56,3 @@ https://fiskoal.github.io/astroplanner/
 ### :clap: Credits  <a name="credits"></a>
 - [Background photo by Vincentiu Solomon](https://unsplash.com/photos/ln5drpv_ImI)
 - <a href="https://www.vecteezy.com/free-vector/moon">Moon Phase Icon Vectors by Vecteezy</a>
-
-##### Todo:
-add URLs to all the API's
-add URLs to the credit stuffs
-add favicon
- 
