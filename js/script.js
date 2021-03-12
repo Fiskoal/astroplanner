@@ -37,10 +37,12 @@ $("#search-button").on("click", function() {
   const previousSearches = JSON.parse(localStorage.
   getItem("astro-searches")) || [];
   // previousSearches pulls data array already in localStorage || OR makes a new array to store values (if there is no key in localStorage for "astro-searches")
-  previousSearches.push(searchValue);
-  // push the value from the search bar into the array
-  localStorage.setItem("astro-searches", JSON.stringify(previousSearches));
-  // saves the array to localStorage
+  if (previousSearches.length > 0 && !(previousSearches.indexOf(searchValue) > -1)) {
+    // push the value from the search bar into the array
+    previousSearches.push(searchValue);
+    // saves the array to localStorage
+    localStorage.setItem("astro-searches", JSON.stringify(previousSearches));
+  }
 })
 
 let isDropdownVis = false;
