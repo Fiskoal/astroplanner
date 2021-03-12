@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astroplanner 🌠</title>
+  <title>AstroPlanner 🌠</title>
   <!-- Google Fonts  -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -24,6 +24,28 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/queries.css">
 
+  <!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="./favicons/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="./favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="./favicons/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="./favicons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="./favicons/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16.png">
+	<link rel="apple-touch-icon" href="./favicons/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicons/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicons/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicons/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="./favicons/favicon-144.png">
+	<meta name="msapplication-config" content="./favicons/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
 </head>
 
 <body>
@@ -32,7 +54,7 @@
       <header>
         <h1 id="location-header">Location:</h1><br>
         <h4 id="location-name">TBD</h4>
-        <h2>AstroPlanner</h2>
+        <h2>Astro<span>Planner</span></h2>
         <section class="search">
           <input type="text" id="search-bar" placeholder="Enter a city name...">
           <button id="search-button">🔍</button>
@@ -66,15 +88,15 @@
           <i id="weather-img" class="large-icon fad fa-clouds large-icon theme-cloud"></i>
           <!-- evening -->
           <i id="evening-icon" class="small-icon fad fa-clouds small-icon theme-cloud"></i>
-          <h4 id="evening-title" class="time-header">Evening:</h4>
-          <p id="evening-time">
-            7pm
+          <h4 id="evening-title" class="time-header">Soon:</h4> <!-- evening became soon -->
+          <p id="evening-time"> 
+            +3h
           </p>
           <!-- night -->
           <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon theme-cloud"></i>
-          <h4 id="night-title" class="time-header">Night:</h4>
+          <h4 id="night-title" class="time-header">Later:</h4> <!-- night became later -->
           <p id="night-time">
-            11p
+            +6h
           </p>
         </div> <!-- end #weather-wrapper-->
         <div id="visibility-wrapper" class="general-wrapper">
@@ -115,8 +137,10 @@
         <div id="moon-phase-wrapper" class="general-wrapper">
           <!-- moon phase -->
           <h3 id="moon-phase-title">Moon Phase:</h3>
-          <h4 id="moon-phase-label">Crescent</h4>
-          <img src="icon/full moon.png" alt="full moon" id="moon-phase-icon">
+          <h4 id="moon-phase-label">&nbsp;</h4>
+          <div id="moon-phase-icon-location">
+            <img src="icon/null.png" alt="full-moon" id="moon-phase-icon">
+          </div>
         </div><!-- end #moon-phase-wrapper-->
       </div> <!-- end #sun-moon-section-->
 

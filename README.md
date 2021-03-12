@@ -1,33 +1,57 @@
-# astroplanner
+# :stars: AstroPlanner
 A user-friendly, open source web application to plan your nights of star-gazing.
 
-## github-pages
+## :book: Table of Contents
+1. [Motivation](#motivation)
+2. [Concept](#concept)
+3. [Technologies Used](#tech)
+4. [Features](#features)
+5. [Deployed Application](#app)
+6. [Credits](#credits)
+
+### :star2: Motivation: <a name="motivation"></a>
+#### User Story:
+**AS A** curious person/ citizen of the world <br>
+**I WANT** to see space maps and weather <br>
+**SO THAT** I can make plans for stargazing 
+
+### :writing_hand: Concept: <a name="concept"></a>
+A user-friendly web application to plan your nights of star gazing. Whenever you want to go stargazing you can check AstroPlanner to decide if right now is a good time to go out and see the stars! 
+
+### :bulb: Technologies Used:  <a name="tech"></a>
+* Languages:
+  * HTML
+  * CSS
+  * JS
+  * jQuery
+* APIs:
+  * [SkyMap](http://www.wikisky.org/api?locale=EN)
+  * [IPGeolocation.io](https://ipgeolocation.io/)
+  * [VisualCrossing.com](https://www.visualcrossing.com/)
+
+### :mage: Features:  <a name="features"></a>
+* Unique mobile and desktop layouts
+* Star Map to help you understand the skies above
+* Rising and Setting of the sun and moon, so you can plan lighting for photography or just to get the best view possible
+* Cities that you search are stored in localStorage for quick access.
+
+### :milky_way: Deployed Application:  <a name="app"></a>
+
 https://fiskoal.github.io/astroplanner/
 
-# Skymap api notes & documentation
-This markdown file is for notes and documentation in relation to and use of the skymap api.<br>
-Anyone feel free to reference it, I know I will. <br>**Heavily.**
+#### :iphone: Mobile Layout:
+<table>
+  <tr>
+    <td>Home Tab</td><td>Forecast Tab</td><td>Sun & Moon Tab</td><td>Star Map Tab</td>
+  </tr>
+  <tr>
+    <td> <img src="assets/mobile-home.png"> </td> <td> <img src="assets/mobile-forecast.png"> </td> <td> <img src="assets/mobile-sunmoon.png"> </td> <td> <img src="assets/mobile-starmap.png"> </td>
+  </tr>
+ </table>
 
-## Quick reference, important definitions 
+#### :computer: Desktop Layout:
+<img src="assets/desktop-screen.png">
 
- ### Right Ascension
- Right ascension is the ***angular distance*** of a particular point measured eastward along the ***celestial equator*** from the sun at the ***Spring Equinox*** (aka Vernal or March Equinox) to the point in question above the Earth.
- > #### Breakdown
- > Right ascension is the distance (in degrees and/or time, SKYMAP API uses degrees) between the where the Sun is during the Vernal Equinox (in relation to the Earth), and the point in question.<br>
- > Note that 24 hours is equal to 360 degrees.
-
- ### Declination
- Declination is the angular distance of a point north or south of the celestial equator.
- > #### Breakdown
- > Vertical angle (north and south) between point of reference and the celestial equator.
-
- ### Angular size of celestial sphere / square (aka angular diameter, apparent diameter, or apparent size)
- The angle between two opposite points of a celesial object, from outside to outside.<br>
- > **this is my breakdown, theres no google  definition of it**
-
- ### Visual Magnitude
- The measure of brightness of a star or other astronomical object observed from Earth.<br>
- > **doesn't need a breakdown**
-
-### Visual stimuli
-![the example I made to better understand it](https://i.imgur.com/524XYcP.png)
+### :clap: Credits  <a name="credits"></a>
+- [Background photo by Vincentiu Solomon](https://unsplash.com/photos/ln5drpv_ImI)
+- <a href="https://www.vecteezy.com/free-vector/moon">Moon Phase Icon Vectors by Vecteezy</a>
