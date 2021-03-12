@@ -40,10 +40,23 @@ A user-friendly web application to plan your nights of star gazing. Whenever you
 https://fiskoal.github.io/astroplanner/
 ![screenshots]()
 
+#### Mobile Layout:
+<table>
+  <tr>
+    <td>Home Tab</td><td>Forecast Tab</td><td>Sun & Moon Tab</td><td>Star Map Tab</td>
+  </tr>
+  <tr>
+    <td> <img src="assets/mobile-home.png"> </td> <td> <img src="assets/mobile-forecast.png"> </td> <td> <img src="assets/mobile-sunmoon.png"> </td> <td> <img src="assets/mobile-starmap.png"> </td>
+  </tr>
+ </table>
+
+#### Desktop Layout:
+<img src="assets/desktop-screen.png">
+
 ### Credits  <a name="credits"></a>
 - Add these:
-- unsplash photo
-- weather icons by wheezy
+- [Background photo by Vincentiu Solomon](https://unsplash.com/photos/ln5drpv_ImI)
+- <a href="https://www.vecteezy.com/free-vector/moon">Moon Phase Icon Vectors by Vecteezy</a>
 
 ##### Todo:
 add URLs to all the API's
