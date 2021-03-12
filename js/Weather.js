@@ -31,18 +31,19 @@ let getWeatherApi = function (pLace) {
                     console.log(data.list[0].visibility);
                     para = data.list[0].visibility;
                     console.log(para);
-                    let visityInMile = para * 0.000621371;
+                    let visity = para * 0.000621371;
+                    let visityInMile = visity.toFixed(2);
                     console.log(visityInMile);
                     Visbi.textContent = " " + visityInMile + " mi";
 
-                    // surise 
+                    // sunrise 
                     //  calling moment function for converting UTC time to current time zone
-                    let SunR = moment.unix(data.city.sunrise).format("hh:mm:ss a");
+                    let SunR = moment.unix(data.city.sunrise).format("kk:mm");
                     Sunrise.textContent = SunR;
 
 
                     //  Sunset 
-                    let SunS = moment.unix(data.city.sunset).format("hh:mm:ss a");
+                    let SunS = moment.unix(data.city.sunset).format("kk:mm");
                     console.log(SunS);
                     Sunset.textContent = SunS;
 
