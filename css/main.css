@@ -1,5 +1,6 @@
 :root {
   --color-highlight: #bb92af;
+  --color-midlight: rgb(92, 62, 99);
   --color-darklight: #442e49;
   --wrapper-border: #ccc;
   /*dark blue is: rgba(2, 5, 43, 0.4)*/
@@ -177,8 +178,8 @@ span {
 }
 
 input:focus {
-  outline-color: var(--color-darklight);
-  border: 3px solid var(--color-darklight);
+  outline-color: var(--color-highlight);
+  border: 3px solid var(--color-highlight);
 }
 
 #search-button {
@@ -188,21 +189,22 @@ input:focus {
 }
 
 #search-button:hover {
-  border: 3px solid var(--color-highlight);
-  background-color: var(--color-darklight);
+  border: 3px solid #fff;
+  background-color: var(--color-midlight);
 }
 
 #icon-glossary {
   border-radius: 9px;
-  border: 3px solid var(--color-highlight);
+  border: 3px solid var(--color-midlight);
   cursor: pointer;
   color: #fff;
-  background-color: rgb(70, 48, 75);
+  background-color: transparent;
   outline-color: rgb(70, 48, 75);
 }
 
 #icon-glossary:hover {
   border: 3px solid #fff;
+  background-color: var(--color-midlight);
 }
 
 /************************/
