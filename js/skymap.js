@@ -48,7 +48,7 @@ $("#search-button").on("click", function () {
             return response.json();
           })
           .then(data2 => {
-            console.log("data is: ");
+            console.log("data2 is: ");
             console.log(data2);
             // links javascript to API data
             let sunriseTime = data2.sunrise;
@@ -65,7 +65,6 @@ $("#search-button").on("click", function () {
             sunsetDisplay.innerHTML = sunsetTime;
             moonriseDisplay.innerHTML = moonriseTime;
             moonsetDisplay.innerHTML = moonsetTime;
-            console.log('sunrise', sunriseTime);
 
             // ACCESS VISUALCROSSING.COM MOON PHASE API DATA
             //console.log(data);
@@ -75,10 +74,11 @@ $("#search-button").on("click", function () {
 
             fetch(moonAPILink)
               .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 return response.json();
               })
               .then(data3 => {
+                console.log("data3 is: ");
                 console.log(data3);
                 // links javascript to API data
                 let moonPhaseValue = data3.currentConditions.moonphase;
@@ -145,12 +145,12 @@ $("#search-button").on("click", function () {
                     console.log('whoops! hello :)');
                   }
 
-                  console.log("====================");
-                  console.log("phase-icon is: ");
-                  console.log(phaseIcon);
-                  console.log("====================");
-                  console.log("phase-text is: ");
-                  console.log(phaseText);
+                  // console.log("====================");
+                  // console.log("phase-icon is: ");
+                  // console.log(phaseIcon);
+                  // console.log("====================");
+                  // console.log("phase-text is: ");
+                  // console.log(phaseText);
 
                   console.log(moonPhaseTextDisplay);
 

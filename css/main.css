@@ -9,28 +9,56 @@
 /*************************/
 /** ICON THEME COLORING **/
 
+
 .theme-sun {
   --fa-primary-color: orange;
   --fa-secondary-color: yellow;
 }
+
+.theme-sun-cloud {
+  --fa-primary-color: lightsteelblue;
+  --fa-secondary-color: gold;  
+}
+
 .theme-moon {
-  --fa-primary-color: lightblue ;
+  --fa-primary-color: lightskyblue;
   --fa-secondary-color: deepskyblue;
 }
 
-.theme-cloud {
-  --fa-primary-color: forestgreen;
-  --fa-secondary-color: forestgreen;
+.theme-moon-cloud {
+  --fa-primary-color: grey;
+  --fa-secondary-color: aqua;  
 }
 
-/* .theme-rain {
-  --fa-primary-color: ;
-  --fa-secondary-color: ;
+.theme-cloud {
+  --fa-primary-color: lightsteelblue;
+  --fa-secondary-color: lightgrey;
 }
-.theme-snow {
-  --fa-primary-color: powderblue ;
-  --fa-secondary-color: ;
-} */
+
+.theme-rain-snow {
+  --fa-primary-color: lightgrey;
+  --fa-secondary-color: lightskyblue;  
+}
+
+.theme-sunrise {
+  --fa-primary-color: goldenrod;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-sunset {
+  --fa-primary-color: darkgoldenrod;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-moonrise {
+  --fa-primary-color: lightskyblue;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-moonset {
+  --fa-primary-color: yellow;
+  --fa-secondary-color: yellow; 
+}
 
 /*******************/
 /** GLOBAL STYLES **/

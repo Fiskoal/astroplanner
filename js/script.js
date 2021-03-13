@@ -86,3 +86,18 @@ $("body").on("click", function (e) {
     $(".previousSearches").attr("id", "");
   }
 })
+
+
+
+
+
+
+
+
+// ! how do I get keydown to work alongside click event?
+button.addEventListener('keydown', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    button.click();
+  }
+});
