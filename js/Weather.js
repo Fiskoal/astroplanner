@@ -4,6 +4,8 @@ let Visbi = document.getElementById("visibility-number");
 let Sunrise = document.getElementById("sunrise-time");
 let Sunset = document.getElementById("sunset-time");
 let CloudStatus = document.getElementById("cloudiness-desc");
+let Hour3 = document.getElementById("soon");
+let Hour6 = document.getElementById("later");
 let Longi;
 let Lati;
 
@@ -62,17 +64,19 @@ let getWeatherApi = function (pLace) {
                         .then(function (data2) {
                             console.log(data2);
                             //cloud status currently
-                            //console.log(data2.current.weather[0].description);
+                            console.log(data2.current.weather[0].description);
                             CloudStatus.textContent = data2.current.weather[0].description;
                             // Cloud status after 3 hours
-                            //console.log(data2.hourly[3].weather[0].description);
+                            console.log(data2.hourly[3].weather[0].description);
                             // Cloud status after 6 hours
-                            //console.log(data2.hourly[6].weather[0].description);
+                            console.log(data2.hourly[6].weather[0].description);
 
 
                             // * ========= * //
                             // ** WEATHER ** //
                             let weather0Detail = data2.hourly[0].weather[0].description;
+                            let weather3Detail = data2.hourly[0].weather[0].description;
+                            let weather6Detail = data2.hourly[0].weather[0].description;
                             // collects ID for weather icon
                             let weather0Data = data2.hourly[0].weather[0].icon;
                             let weather0ID = data2.hourly[0].weather[0].id;
@@ -91,8 +95,14 @@ let getWeatherApi = function (pLace) {
                             let weatherIcon = document.querySelector('#weather-icon');
                             let eveningIcon = document.querySelector('#evening-icon');
                             let nightIcon = document.querySelector('#night-icon');
-
+                            let weather0Text = document.querySelector('#weather-desc');
+                            let weather3Text = document.querySelector('#evening-desc');
+                            let weather6Text = document.querySelector('#night-desc');
                             let cloudNumber = document.querySelector('#cloudiness-number');
+
+                            weather0Text.innerHTML = weather0Detail;
+                            weather3Text.innerHTML = weather0Detail;
+                            weather6Text.innerHTML = weather0Detail;
                             cloudNumber.innerHTML = `${cloud0Data}%`
 
                                                         
