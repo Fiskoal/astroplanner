@@ -36,14 +36,10 @@ if (window.innerWidth <= 750) {
 
 $("#search-button").on("click", function() {
   let searchValue = $("#search-bar").val().trim();
-  // searchValue grabs the input of the search bar, trim() method just removes any extra spaces
-  const previousSearches = JSON.parse(localStorage.
-  getItem("astro-searches")) || [];
-  // previousSearches pulls data array already in localStorage || OR makes a new array to store values (if there is no key in localStorage for "astro-searches")
-  if (previousSearches.length > 0 && !(previousSearches.indexOf(searchValue) > -1)) {
-      // push the value from the search bar into the array
+  const previousSearches = JSON.parse(localStorage.getItem("astro-searches")) || [];
+  console.log(previousSearches);
+  if (!(previousSearches.indexOf(searchValue) > -1)) {
       previousSearches.push(searchValue);
-      // saves the array to localStorage
       localStorage.setItem("astro-searches", JSON.stringify(previousSearches));
     }
   })
@@ -55,8 +51,7 @@ $("#search-bar").on("click", function (e) {
   // console.log("clicked");
   e.stopPropagation();
   // stopPropagation() method prevents further propagation of the event from bubbling out
-  const previousSearches = JSON.parse(localStorage.
-  getItem("astro-searches")) || [];
+  const previousSearches = JSON.parse(localStorage.getItem("astro-searches")) || [];
   // previousSearches does the same here as in the button function. Will err out if OR is not included
   if (previousSearches.length > 0){
     // checks if the localStorage array length is greater than 0 (not an empty array)
