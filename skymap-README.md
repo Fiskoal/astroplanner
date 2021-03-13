@@ -1,5 +1,6 @@
 
 # Skymap api notes & documentation
+Unfortunately, a lot of this ended up not being used because of SkyMap server errors.<br>
 This markdown file is for notes and documentation in relation to and use of the skymap api.<br>
 Anyone feel free to reference it, I know I will. <br>**Heavily.**
 
