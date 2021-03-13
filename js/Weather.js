@@ -50,7 +50,7 @@ let getWeatherApi = function (pLace) {
                     // Getting Latitude & Longitude 
                     Longi = data.city.coord.lon;
                     Lati = data.city.coord.lat;
-                    //console.log(Longi);
+                    // console.log(Longi);
                     //console.log(Lati);
 
                     // New API 
