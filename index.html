@@ -16,13 +16,12 @@
   <!-- Pure.css framework -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
     integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
-
-    <!-- for Moment -->
-    <link rel="stylesheet" href="./assets/css/style.css" /> <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <!-- moment.js -->
+  <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   <!-- custom styles -->
-  <link rel="stylesheet" href="css/css-grid.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/queries.css">
+  <link rel="stylesheet" href="css/css-grid.css"> <!-- CSS grid layout -->
+  <link rel="stylesheet" href="css/main.css"> <!-- all other CSS styling -->
+  <link rel="stylesheet" href="css/queries.css"> <!-- media queries for desktop layout -->
 
   <!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="./favicons/favicon.ico">
@@ -52,9 +51,9 @@
   <div id="background-shader">
     <div class="container-wrapper">
       <header>
-        <h1 id="location-header">Location:</h1><br>
+        <h1 id="app-name">Astro<span>Planner</span></h1>
+        <h2 id="location-header">Location:</h2><br>
         <h4 id="location-name">TBD</h4>
-        <h2>Astro<span>Planner</span></h2>
         <section class="search">
           <input type="text" id="search-bar" placeholder="Enter a city name...">
           <button id="search-button">🔍</button>
@@ -64,8 +63,8 @@
 
       <!-- tab buttons -->
       <div id="tab-buttons">
-        <button class="tab-link" onclick="openPage('home', this, 'var(--color-highlight)')">Home</button>
-        <button class="tab-link" onclick="openPage('forecast', this, 'var(--color-highlight)')" id="defaultOpen">Forecast</button>
+        <button class="tab-link" onclick="openPage('home', this, 'var(--color-highlight)')" id="defaultOpen">Home</button>
+        <button class="tab-link" onclick="openPage('forecast', this, 'var(--color-highlight)')">Forecast</button>
         <button class="tab-link" onclick="openPage('sun-moon', this, 'var(--color-highlight)')">Sun/Moon</button>
         <button class="tab-link" onclick="openPage('star-map', this, 'var(--color-highlight)')">Star Map</button>
       </div>
@@ -74,36 +73,53 @@
       <div id="home" class="tab-content">
 
         <div id="welcome">
-          <p><strong>Welcome to AstroPlanner!</strong></p>
+          <p class="intro-emphasis">Welcome to Astro<span>Planner</span>!</p>
           <p>Here you can find out when the sun & moon rise and set at your location, as well as how clear the night sky
             is above you.</p>
           <p>AstroPlanner also generates a star map for you so that you have everything you need to go star-gazing!</p>
+          <a href="all-icons.html" id="icon-glossary" class="button-xsmall">Icon Glossary</a> 
         </div>
       </div>
 
       <div id="forecast" class="tab-content">
         <div id="weather-wrapper" class="general-wrapper">
           <!-- weather -->
-          <h3 id="weather-title">Weather:</h3>
-          <i id="weather-img" class="large-icon fad fa-clouds large-icon theme-cloud"></i>
+          <h3 id="weather-header">Weather:</h3>
+          <div id="weather-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
+          <h4 id="weather-title" class="time-header title">Current:</h4>
+          <p id="weather-desc">
+            &nbsp;
+          </p>
           <!-- evening -->
-          <i id="evening-icon" class="small-icon fad fa-clouds small-icon theme-cloud"></i>
-          <h4 id="evening-title" class="time-header">Soon:</h4> 
-          <p id="evening-time"> 
-            +3h <br><span id="soon"></span>
+          <div id="evening-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
+          <h4 id="evening-title" class="time-header title">In 3 hours:</h4> <!-- evening became soon -->
+          <p id="evening-desc"> 
+            &nbsp;
           </p>
           <!-- night -->
-          <i id="night-icon" class="small-icon fad fa-cloud-moon small-icon theme-cloud"></i>
-          <h4 id="night-title" class="time-header">Later:</h4> 
-          <p id="night-time">
-            +6h <br><span id="later"></span>
+          <div id="night-icon">
+            <i class="small-icon fad fa-telescope small-icon theme-cloud"></i>
+          </div>
+          <h4 id="night-title" class="time-header title">In 6 hours:</h4> <!-- night became later -->
+          <p id="night-desc">
+            &nbsp;
           </p>
         </div> <!-- end #weather-wrapper-->
         <div id="visibility-wrapper" class="general-wrapper">
           <!-- visibility phase -->
-          <h3 id="visibility-title">Visibility :<span id ="visibility-status"></span></h3>
-          <h4 id="visibility-label"></h4>
-          <p id="visibility-desc"></p>
+          <h3 id="sky-header">Sky:</h3>
+          <!-- sky visibility -->
+          <h3 id="visibility-title" class="title">Visibility:<span id ="visibility-status"></span></h3>
+          <p4 id="visibility-number">?</p4>
+          <p id="visibility-desc">&nbsp;</p><!-- TODO: rate visibility-->
+          <!-- sky visibility -->
+          <h3 id="cloudiness-title" class="title">Cloudiness:</h3>
+          <p id="cloudiness-number">?</p>
+          <p id="cloudiness-desc"></p>
         </div><!-- end #visibility-wrapper-->
       </div> <!-- end #forecast tab-->
 
@@ -113,30 +129,30 @@
           <h3 id="sun-title">Sun:</h3>
           <i id="sun-img" class="fad fa-sun large-icon theme-sun"></i>
           <!-- sunrise -->
-          <i id="sunrise-icon" class="fad fa-sunrise small-icon theme-sun"></i>
-          <h4 id="sunrise-title" class="time-header">Sunrise:</h4>
+          <i id="sunrise-icon" class="fad fa-sunrise small-icon theme-sunrise"></i>
+          <h4 id="sunrise-title" class="time-header title">Sunrise:</h4>
           <p id="sunrise-time">&nbsp;</p>
           <!-- sunset -->
-          <i id="sunset-icon" class="fad fa-sunset small-icon theme-sun"></i>
-          <h4 id="sunset-title" class="time-header">Sunset:</h4>
+          <i id="sunset-icon" class="fad fa-sunset small-icon theme-sunset"></i>
+          <h4 id="sunset-title" class="time-header title">Sunset:</h4>
           <p id="sunset-time">&nbsp;</p>
         </div><!-- end #sun-wrapper-->
         <div id="moon-wrapper" class="general-wrapper">
           <!-- moon info -->
           <h3 id="moon-title">Moon:</h3>
-          <i id="moon-img" class="fad fa-moon-stars large-icon theme-moon"></i>
+          <i id="moon-img" class="fad fa-moon large-icon theme-moon"></i>
           <!-- moonrise -->
-          <i id="moonrise-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
-          <h4 id="moonrise-title">Moonrise:</h4>
+          <i id="moonrise-icon" class="fad fa-moon-stars small-icon theme-moonrise"></i>
+          <h4 id="moonrise-title" class="title">Moonrise:</h4>
           <p id="moonrise-time">&nbsp;</p>
           <!-- moonset -->
-          <i id="moonset-icon" class="fad fa-moon-stars small-icon theme-moon"></i>
-          <h4 id="moonset-title">Moonset:</h4>
+          <i id="moonset-icon" class="fad fa-stars small-icon theme-moonset"></i>
+          <h4 id="moonset-title" class="title">Moonset:</h4>
           <p id="moonset-time">&nbsp;</p>
         </div><!-- end #moon-wrapper-->
         <div id="moon-phase-wrapper" class="general-wrapper">
           <!-- moon phase -->
-          <h3 id="moon-phase-title">Moon Phase:</h3>
+          <h3 id="moon-phase-title" class="title">Moon Phase:</h3>
           <h4 id="moon-phase-label">&nbsp;</h4>
           <div id="moon-phase-icon-location">
             <img src="icon/null.png" alt="full-moon" id="moon-phase-icon">
@@ -145,8 +161,10 @@
       </div> <!-- end #sun-moon-section-->
 
       <div id="star-map" class="tab-content">
-        <h3 id="map-header">Star map for:</h3>
-        <iframe id="map-img"></iframe>
+        <div id="map-div">
+          <h5 id="map-header">Star map for:</h5>
+          <iframe id="map-img"></iframe>
+        </div>
       </div>
     </div>
   </div>

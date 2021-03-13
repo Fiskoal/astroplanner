@@ -1,5 +1,7 @@
 :root {
   --color-highlight: #bb92af;
+  --color-midlight: rgb(92, 62, 99);
+  --color-darklight: #442e49;
   --wrapper-border: #ccc;
   /*dark blue is: rgba(2, 5, 43, 0.4)*/
 }
@@ -7,28 +9,61 @@
 /*************************/
 /** ICON THEME COLORING **/
 
+
 .theme-sun {
   --fa-primary-color: orange;
   --fa-secondary-color: yellow;
 }
+
+.theme-sun-cloud {
+  --fa-primary-color: lightsteelblue;
+  --fa-secondary-color: gold;  
+}
+
 .theme-moon {
-  --fa-primary-color: lightblue ;
+  --fa-primary-color: lightskyblue;
   --fa-secondary-color: deepskyblue;
 }
 
-.theme-cloud {
-  --fa-primary-color: plum;
-  --fa-secondary-color: plum;
+.theme-moon-cloud {
+  --fa-primary-color: grey;
+  --fa-secondary-color: aqua;  
 }
 
-/* .theme-rain {
-  --fa-primary-color: ;
-  --fa-secondary-color: ;
+.theme-cloud {
+  --fa-primary-color: lightsteelblue;
+  --fa-secondary-color: lightgrey;
 }
-.theme-snow {
-  --fa-primary-color: powderblue ;
-  --fa-secondary-color: ;
-} */
+
+.theme-overcast {
+  --fa-primary-color: grey;
+  --fa-secondary-color: darkgrey;
+}
+
+.theme-rain-snow {
+  --fa-primary-color: lightgrey;
+  --fa-secondary-color: lightskyblue;  
+}
+
+.theme-sunrise {
+  --fa-primary-color: goldenrod;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-sunset {
+  --fa-primary-color: darkgoldenrod;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-moonrise {
+  --fa-primary-color: lightskyblue;
+  --fa-secondary-color: yellow; 
+}
+
+.theme-moonset {
+  --fa-primary-color: yellow;
+  --fa-secondary-color: yellow; 
+}
 
 /*******************/
 /** GLOBAL STYLES **/
@@ -57,18 +92,31 @@ body {
 
 }
 
-h1,
 h2,
+h1,
 h3,
-h4 {
+h4,
+h5 {
   text-transform: uppercase;  
   font-family: 'Montserrat Alternates', sans-serif;
   margin: 0px;
+}
+
+h2,
+h1,
+h3,
+h4 {
   display: inline-block;
 }
 
 h1 {
-  font-size: 32px;
+  margin-bottom: 10px;
+  font-size: 32px; 
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
   padding: 2px 0 8px;
 }
 
@@ -76,9 +124,8 @@ span {
   color: #fff;
 }
 
-h2 {
-  padding-left: 15px;
-  margin-bottom: 10px;
+h5 {
+  font-size: 22px;
 }
 
 .large-icon,
@@ -92,6 +139,15 @@ h2 {
   font-size: 30px;
   margin: 0 auto;
   padding-top: 10%;
+}
+
+.intro-emphasis {
+  font-weight: bold;
+  font-size: 22px; 
+}
+
+a {
+  text-decoration: none;
 }
 
 /*********************/
@@ -133,7 +189,7 @@ header {
 
 
 #location-name,
-h2 {
+span {
   color: var(--color-highlight);
 }
 
@@ -159,13 +215,33 @@ h2 {
 }
 
 input:focus {
-  outline-color: rgba(2, 5, 43, 0.4);
+  outline-color: var(--color-highlight);
+  border: 3px solid var(--color-highlight);
 }
 
 #search-button {
   border: 3px solid #ccc;
   border-radius: 5px;
   background-color: #ccc;
+}
+
+#search-button:hover {
+  border: 3px solid #fff;
+  background-color: var(--color-midlight);
+}
+
+#icon-glossary {
+  border-radius: 9px;
+  border: 3px solid var(--color-midlight);
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  outline-color: rgb(70, 48, 75);
+}
+
+#icon-glossary:hover {
+  border: 3px solid #fff;
+  background-color: var(--color-midlight);
 }
 
 /************************/
@@ -204,6 +280,39 @@ input:focus {
   backdrop-filter: blur(5px);
 }
 
+/********************/
+/** WEATHER STYLES **/
+#weather-header,
+#sky-header {
+  padding: 10px 0 5px;
+}
+
+#weather-icon,
+#evening-icon,
+#night-icon {
+  padding-top: 10px;
+}
+
+/*******************************/
+/** CLOUD & VISIBILITY STYLES **/
+#visibility-title {
+  padding: 10px 0 5px;
+}
+
+#cloudiness-title {
+  padding: 10px 0 15px;
+}
+
+#visibility-label {
+  padding: 5px 0 10px;
+}
+
+#visibility-desc,
+#cloudiness-desc {
+  padding: 3px 0;
+  margin: 3px 0;
+}
+
 /***********************/
 /** SUN & MOON STYLES **/
 #sun-wrapper,
@@ -212,12 +321,7 @@ input:focus {
   text-align: center;
 }
 
-#sunrise-title,
-#moonrise-title,
-#evening-title,
-#sunset-title,
-#moonset-title,
-#night-title {
+.title {
   padding-top: 10px;
   color: var(--color-highlight);
 }
@@ -232,21 +336,6 @@ input:focus {
 }
 
 /***********************/
-/** VISIBILITY STYLES **/
-#visibility-title {
-  padding: 10px 0 5px;
-}
-
-#visibility-label {
-  padding: 5px 0 10px;
-  color: var(--color-highlight);
-}
-
-#visibility-desc {
-  padding: 3px 0;
-}
-
-/***********************/
 /** MOON PHASE STYLES **/
 #moon-phase-title {
   padding: 10px 0 5px;
@@ -254,8 +343,7 @@ input:focus {
 
 #moon-phase-label {
   padding: 10px 0;
-  font-size: 20px;
-  color: var(--color-highlight);
+  font-size: 16px;
 }
 
 #moon-phase-icon {
@@ -264,22 +352,29 @@ input:focus {
 
 /*********************/
 /** STAR MAP STYLES **/
+
 #star-map {
-  border-radius: 10px;
-  background: rgba(2, 5, 43, 0.4);
+  margin: 60px 0 0 0;
+  padding: 2px;
 }
 
 iframe {
-  width: 99%;
-  height: 80%;
   margin: 0;
   padding: 0;
+  width: 99%;
+  height: 88%;
   border: 3px solid #333;
   border-radius: 10px;
 }
 
 #map-header {
   margin-bottom: 20px;
+}
+#map-div {
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(2, 5, 43, 0.4);
+
 }
 
 /*******************/
@@ -290,10 +385,6 @@ footer a {
   text-align: center;
   font-size: 12px;
 }
-
-#map {
-  background-color: aqua;
-} 
 
 /****************************/
 /* Previous Searches */

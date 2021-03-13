@@ -35,7 +35,7 @@ $("#search-button").on("click", function () {
 
         $("#map-img").attr("src", "https://server1.sky-map.org/skywindow?ra=" + ra + "&de=" + de + "&zoom=0");
 
-        console.log($("#map-img").attr())
+        //console.log($("#map-img").attr())
 
         // ACCESS IPGEOLOCATION.IO API DATA
         //console.log(data.results[0].geometry.lng);
@@ -48,7 +48,7 @@ $("#search-button").on("click", function () {
             return response.json();
           })
           .then(data2 => {
-            console.log("data is: ");
+            console.log("data2 is: ");
             console.log(data2);
             // links javascript to API data
             let sunriseTime = data2.sunrise;
@@ -65,7 +65,6 @@ $("#search-button").on("click", function () {
             sunsetDisplay.innerHTML = sunsetTime;
             moonriseDisplay.innerHTML = moonriseTime;
             moonsetDisplay.innerHTML = moonsetTime;
-            console.log('sunrise', sunriseTime);
 
             // ACCESS VISUALCROSSING.COM MOON PHASE API DATA
             //console.log(data);
@@ -75,11 +74,12 @@ $("#search-button").on("click", function () {
 
             fetch(moonAPILink)
               .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 return response.json();
               })
               .then(data3 => {
-                // console.log(data3);
+                console.log("data3 is: ");
+                console.log(data3);
                 // links javascript to API data
                 let moonPhaseValue = data3.currentConditions.moonphase;
                 // links javascript to HTML elements
@@ -94,7 +94,7 @@ $("#search-button").on("click", function () {
                   if ((moonPhaseValue === 0) || (moonPhaseValue === 1)) {
                     console.log('new-moon');
                     phaseIcon = "new";
-                    phaseText = "waxing crescent";
+                    phaseText = "new moon";
 
                   } else if (moonPhaseValue <= 0.125) {
                     console.log('<= 0.125');
@@ -119,12 +119,12 @@ $("#search-button").on("click", function () {
                   } else if (moonPhaseValue === 0.500) {
                     console.log('full-moon');
                     phaseIcon = "full";
-                    phaseText = "waxing gibbous";
+                    phaseText = "full moon";
 
                   } else if (moonPhaseValue <= 0.625) {
                     console.log('<= 0.625');
                     phaseIcon = "m625";
-                    phaseText = "waxing gibbous";
+                    phaseText = "waning gibbous";
 
                   } else if (moonPhaseValue <= 0.75) {
                     console.log('<= 0.750');
@@ -145,17 +145,20 @@ $("#search-button").on("click", function () {
                     console.log('whoops! hello :)');
                   }
 
-                  console.log("====================");
-                  console.log("phase-icon is: ");
+                  // console.log("====================");
+                  // console.log("phase-icon is: ");
                   console.log(phaseIcon);
-                  console.log("====================");
-                  console.log("phase-text is: ");
+                  // console.log("====================");
+                  // console.log("phase-text is: ");
                   console.log(phaseText);
 
                   console.log(moonPhaseTextDisplay);
 
                   moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
+                  console.log(moonPhaseIconDisplay);
                   moonPhaseTextDisplay.innerHTML = `${phaseText}`;
+                  console.log(moonPhaseTextDisplay);
+
                   // displays current phase icon and text in HTML
                   //function loadPhase(){
                 }
