@@ -4,8 +4,8 @@ let Visbi = document.getElementById("visibility-status");
 let Sunrise = document.getElementById("sunrise-time");
 let Sunset = document.getElementById("sunset-time");
 let CloudStatus = document.getElementById("visibility-desc");
-let Hour3 = document.getElementById("soon");
-let Hour6 = document.getElementById("later");
+let H3ours = document.getElementById("soon");
+let H6ours = document.getElementById("later")
 let Longi;
 let Lati;
 
@@ -32,9 +32,9 @@ let getWeatherApi = function (pLace) {
                     //visibility
                     console.log(data.list[0].visibility);
                     para = data.list[0].visibility;
-                    console.log(para);
+                    //console.log(para);
                     let visityInMile = para * 0.000621371;
-                    console.log(visityInMile);
+                    //console.log(visityInMile);
                     Visbi.textContent = " " + visityInMile + " mi";
 
                     // surise 
@@ -45,14 +45,14 @@ let getWeatherApi = function (pLace) {
 
                     //  Sunset 
                     let SunS = moment.unix(data.city.sunset).format("hh:mm:ss a");
-                    console.log(SunS);
+                    //console.log(SunS);
                     Sunset.textContent = SunS;
 
                     // Getting Latitude & Longitude 
                     Longi = data.city.coord.lon;
                     Lati = data.city.coord.lat;
-                    console.log(Longi);
-                    console.log(Lati);
+                    // console.log(Longi);
+                    //console.log(Lati);
 
                     // New API 
                     let apiURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + Longi + '&lon=' + Lati + '&appid=3ee6de7b8fdeda946857956b40bd39af';
@@ -65,20 +65,15 @@ let getWeatherApi = function (pLace) {
                         .then(function (data) {
                             console.log(data)
                             //cloud status currently
-                            //console.log(data.current.weather[0].description);
                             CloudStatus.textContent = data.current.weather[0].description;
-
                             // Cloud status after 3 hours
-                            //console.log(data.hourly[2].weather);
-                            console.log(data.hourly[2].weather[0].description);
-                            Hour3.textContent = data.hourly[2].weather[0].description;
-
-                            // Cloud status after 3 hours
-                            console.log(data.hourly[7].weather[0].description);
-                            Hour6.textContent = data.hourly[7].weather[0].description;
-
+                            H3ours.textContent = data.hourly[2].weather[0].description;
+                            // Cloud status after 6 hours
+                            console.log(data.hourly[5].weather[0].description);
+                            H6ours.textContent = data.hourly[5].weather[0].description;
 
                         });
+
 
                 })
             }
