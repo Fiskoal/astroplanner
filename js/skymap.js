@@ -94,7 +94,7 @@ $("#search-button").on("click", function () {
                   if ((moonPhaseValue === 0) || (moonPhaseValue === 1)) {
                     console.log('new-moon');
                     phaseIcon = "new";
-                    phaseText = "waxing crescent";
+                    phaseText = "new moon";
 
                   } else if (moonPhaseValue <= 0.125) {
                     console.log('<= 0.125');
@@ -119,12 +119,12 @@ $("#search-button").on("click", function () {
                   } else if (moonPhaseValue === 0.500) {
                     console.log('full-moon');
                     phaseIcon = "full";
-                    phaseText = "waxing gibbous";
+                    phaseText = "full moon";
 
                   } else if (moonPhaseValue <= 0.625) {
                     console.log('<= 0.625');
                     phaseIcon = "m625";
-                    phaseText = "waxing gibbous";
+                    phaseText = "waning gibbous";
 
                   } else if (moonPhaseValue <= 0.75) {
                     console.log('<= 0.750');
@@ -147,15 +147,18 @@ $("#search-button").on("click", function () {
 
                   // console.log("====================");
                   // console.log("phase-icon is: ");
-                  // console.log(phaseIcon);
+                  console.log(phaseIcon);
                   // console.log("====================");
                   // console.log("phase-text is: ");
-                  // console.log(phaseText);
+                  console.log(phaseText);
 
                   console.log(moonPhaseTextDisplay);
 
                   moonPhaseIconDisplay.innerHTML = `<img src="icon/${phaseIcon}.png" alt="full-moon" id="moon-phase-icon">`;
+                  console.log(moonPhaseIconDisplay);
                   moonPhaseTextDisplay.innerHTML = `${phaseText}`;
+                  console.log(moonPhaseTextDisplay);
+
                   // displays current phase icon and text in HTML
                   //function loadPhase(){
                 }
