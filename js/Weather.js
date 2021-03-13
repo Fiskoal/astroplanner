@@ -124,14 +124,14 @@ let getWeatherApi = function (pLace) {
                             // 804 = overcast
                             } else if (weather0ID == 804) {
                                 console.log('804');
-                                weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-clouds large-icon theme-cloud"></i>`;
+                                weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-clouds large-icon theme-overcast"></i>`;
                             // all other situations following are coded specifically to the #d/#n icon code or they apply to both times of day:
                             } else if (weather0Data == '01d') {
                                 console.log('01d');
                                 weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-sun large-icon theme-sun"></i>`;
                             } else if (weather0Data == '02d') {
                                 console.log('02d');
-                                weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-sun-cloud large-icon theme-sun-cloud"></i>`;
+                                weatherIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-sun-cloud large-icon theme-sun-cloud"></i>`;
                             } else if (weather0Data == '03d') {
                                 console.log('03d');
                                 weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-cloud-sun large-icon theme-sun-cloud"></i>`;
@@ -167,6 +167,9 @@ let getWeatherApi = function (pLace) {
                             } else if (weather0Data == '04n') {
                                 console.log('04n');
                                 weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-clouds-moon large-icon theme-moon-cloud"></i>`;
+                            } else if (weather0Data == '09n') {
+                                console.log('09n');
+                                weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-cloud-showers-heavy large-icon theme-moon-cloud"></i>`;
                             } else if (weather0Data == '10n') {
                                 console.log('10n');
                                 weatherIcon.innerHTML = `<i id="weather-icon" class="small-icon fad fa-cloud-moon-rain large-icon theme-moon-cloud"></i>`;
@@ -194,7 +197,7 @@ let getWeatherApi = function (pLace) {
                                 // 804 = overcast
                             } else if (weather3ID == 804) {
                                 console.log('804');
-                                eveningIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-clouds large-icon theme-cloud"></i>`;
+                                eveningIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-clouds large-icon theme-overcast"></i>`;
                                 // all other situations following are coded specifically to the #d/#n icon code or they apply to both times of day:
                             } else if (weather3Data == '01d') {
                                 console.log('01d');
@@ -237,6 +240,9 @@ let getWeatherApi = function (pLace) {
                             } else if (weather3Data == '04n') {
                                 console.log('04n');
                                 eveningIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-clouds-moon large-icon theme-moon-cloud"></i>`;
+                            } else if (weather0Data == '09n') {
+                                console.log('09n');
+                                weatherIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-cloud-showers-heavy large-icon theme-moon-cloud"></i>`;
                             } else if (weather3Data == '10n') {
                                 console.log('10n');
                                 eveningIcon.innerHTML = `<i id="evening-icon" class="small-icon fad fa-cloud-moon-rain large-icon theme-moon-cloud"></i>`;
@@ -259,7 +265,7 @@ let getWeatherApi = function (pLace) {
                                 nightIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-clouds-sun large-icon theme-sun-cloud"></i>`;
                             } else if ((weather6ID == 803) && (weather6Data == '03n')) {
                                 console.log('803-night');
-                                nightIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-clouds-moon large-icon theme-cloud"></i>`;
+                                nightIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-clouds-moon large-icon theme-overcast"></i>`;
                                 // 804 = overcast
                             } else if (weather6ID == 804) {
                                 console.log('804');
@@ -306,6 +312,9 @@ let getWeatherApi = function (pLace) {
                             } else if (weather6Data == '04n') {
                                 console.log('04n');
                                 nightIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-clouds-moon large-icon theme-moon-cloud"></i>`;
+                            } else if (weather0Data == '09n') {
+                                console.log('09n');
+                                weatherIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-cloud-showers-heavy large-icon theme-moon-cloud"></i>`;
                             } else if (weather6Data == '10n') {
                                 console.log('10n');
                                 nightIcon.innerHTML = `<i id="night-icon" class="small-icon fad fa-cloud-moon-rain large-icon theme-moon-cloud"></i>`;

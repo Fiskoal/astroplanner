@@ -35,6 +35,11 @@
   --fa-secondary-color: lightgrey;
 }
 
+.theme-overcast {
+  --fa-primary-color: grey;
+  --fa-secondary-color: darkgrey;
+}
+
 .theme-rain-snow {
   --fa-primary-color: lightgrey;
   --fa-secondary-color: lightskyblue;  
